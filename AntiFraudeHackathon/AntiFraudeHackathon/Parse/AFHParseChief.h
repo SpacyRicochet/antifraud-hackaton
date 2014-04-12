@@ -13,6 +13,9 @@
 + (AFHParseChief *)shared;
 
 - (void)didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken;
-- (void)didReceiveRemoteNotification:(NSDictionary *)userInfo;
+- (void)didReceiveRemoteNotification:(NSDictionary *)userInfo managedObjectContext:(NSManagedObjectContext *)context;
+- (void)fetchActivities;
+- (void)fetchActivitiesSinceDate:(NSDate *)date;
+
 
 @end

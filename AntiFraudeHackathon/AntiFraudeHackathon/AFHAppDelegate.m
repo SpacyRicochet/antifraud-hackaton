@@ -8,10 +8,13 @@
 
 #import "AFHAppDelegate.h"
 #import "AFHParseChief.h"
+#import "AFHCoreDataChief.h"
+#import <CoreData/CoreData.h>
 
 @interface AFHAppDelegate ()
 
 @property (nonatomic, strong) AFHParseChief *parseChief;
+@property (nonatomic, strong) NSManagedObjectContext *managedObjectContext;
 
 @end
 
@@ -23,6 +26,9 @@
     
     // Setup Parse
     self.parseChief = [AFHParseChief shared];
+    [self.parseChief fetchActivities];
+    
+    self.managedObjectContext = [AFHCoreDataChief shared].managedObjectContext;
     
     return YES;
 }
@@ -63,7 +69,7 @@
 
 - (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo
 {
-    [self.parseChief didReceiveRemoteNotification:userInfo];
+    [self.parseChief didReceiveRemoteNotification:userInfo managedObjectContext:self.managedObjectContext];
 }
 
 @end
