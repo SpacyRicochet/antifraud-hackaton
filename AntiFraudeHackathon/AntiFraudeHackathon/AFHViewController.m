@@ -33,6 +33,7 @@
 {
     [super viewDidAppear:animated];
     
+    [self.navigationController setNavigationBarHidden:YES animated:YES];
     [self showInterface];
 }
 
@@ -91,6 +92,7 @@
     [_passcodeField setPlaceholder:NSLocalizedString(@"Wachtwoord", nil)];
     [_passcodeField setSecureTextEntry:YES];
     [_loginButton setTitle:NSLocalizedString(@"Login", nil) forState:UIControlStateNormal];
+    [_loginButton addTarget:self action:@selector(login) forControlEvents:UIControlEventTouchUpInside];
     
     _constraintForLoginButton = [NSLayoutConstraint constraintWithItem:self.view
                                                                                  attribute:NSLayoutAttributeBottom
@@ -98,7 +100,7 @@
                                                                                     toItem:_loginButton
                                                                                  attribute:NSLayoutAttributeBottom
                                                                                 multiplier:1
-                                                                                  constant:16];
+                                                                                  constant:-170];
     [self.view addConstraint:_constraintForLoginButton];
     
     NSLayoutConstraint *_constraintForPasscodeField = [NSLayoutConstraint constraintWithItem:_loginButton
@@ -125,7 +127,7 @@
     _constraintForLoginButton.constant = 235;
     [UIView animateWithDuration:.8
                           delay:0
-         usingSpringWithDamping:.6
+         usingSpringWithDamping:.75
           initialSpringVelocity:.3
                         options:UIViewAnimationOptionCurveEaseOut
                      animations:^{
@@ -148,9 +150,25 @@
     }
     else
     {
-        [textField resignFirstResponder];
+        [self login];
     }
     return YES;
+}
+
+#pragma mark - Login
+
+- (void)login
+{
+    if ([_userNameField isFirstResponder])
+    {
+        [_userNameField resignFirstResponder];
+    }
+    else if ([_passcodeField isFirstResponder])
+    {
+        [_passcodeField resignFirstResponder];
+    }
+    
+    [self performSegueWithIdentifier:@"tableViewSegue" sender:self];
 }
 
 #pragma mark - Constraints
