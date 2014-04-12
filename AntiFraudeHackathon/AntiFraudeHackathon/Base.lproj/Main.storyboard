@@ -121,6 +121,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="48" id="4LD-bd-GSa"/>
+                                    <constraint firstAttribute="width" constant="280" id="6aS-WT-9yR"/>
                                 </constraints>
                                 <state key="normal" title="Meld probleem!">
                                     <color key="titleColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -159,21 +160,47 @@
                         <outlet property="mapView" destination="YKN-Dg-cFH" id="cM1-lP-e4F"/>
                         <outlet property="reportButton" destination="b9X-Ug-cab" id="9fu-tt-nLY"/>
                         <outlet property="timeLabel" destination="swV-zU-208" id="dO4-Lu-I9R"/>
+                        <segue destination="ivR-QW-4SN" kind="push" identifier="reportSegue" id="woG-z1-ljJ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xs1-Gm-ZGp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1587" y="100"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Report View Controller - Meld Probleem-->
+        <scene sceneID="eR6-IY-80F">
+            <objects>
+                <viewController id="ivR-QW-4SN" customClass="AFHReportViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="6kM-uj-pEU"/>
+                        <viewControllerLayoutGuide type="bottom" id="f0Y-FN-5SX"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ixH-Lz-PlV">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Meld Probleem" id="7Fo-jr-sT3"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dA2-M6-6cM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2072" y="100"/>
+        </scene>
+        <!--Nav View Controller-->
         <scene sceneID="l4H-DA-kgm">
             <objects>
-                <navigationController definesPresentationContext="YES" navigationBarHidden="YES" id="7eg-ug-HXP" sceneMemberID="viewController">
+                <navigationController definesPresentationContext="YES" navigationBarHidden="YES" id="7eg-ug-HXP" customClass="AFHNavViewController" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="WT6-K3-3x6"/>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
                     <nil key="simulatedTopBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="UmG-nz-Mnm">
                         <rect key="frame" x="0.0" y="0.0" width="0.0" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="barTintColor" red="0.078431375319999996" green="0.2588235438" blue="0.45098042490000001" alpha="1" colorSpace="deviceRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        </textAttributes>
                     </navigationBar>
                     <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="bAY-zX-qpk">
                         <rect key="frame" x="0.0" y="524" width="320" height="44"/>

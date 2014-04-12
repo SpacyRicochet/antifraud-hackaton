@@ -9,6 +9,7 @@
 #import <MapKit/MapKit.h>
 #import "AFHDetailViewController.h"
 #import "AFHDataObject.h"
+#import "AFHReportViewController.h"
 
 @interface AFHDetailViewController ()
 
@@ -33,6 +34,18 @@
     NSDateFormatter *dateFormatter = [NSDateFormatter new];
     [dateFormatter setTimeStyle:NSDateFormatterMediumStyle];
     _timeLabel.text = [dateFormatter stringFromDate:_dataObject.timeStamp];
+    
+    [_reportButton addTarget:self action:@selector(reportButtonPressed) forControlEvents:UIControlEventTouchUpInside];
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    
+    if (_dataObject.flagged)
+    {
+        [_reportButton setTitle:NSLocalizedString(@"Probleem gemeld", nil) forState:UIControlStateNormal];
+    }
 }
 
 - (void)viewDidAppear:(BOOL)animated
@@ -55,9 +68,19 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (void)setDataObject:(AFHDataObject *)dataObject
+#pragma mark - User Interaction
+
+- (void)reportButtonPressed
 {
-    _dataObject = dataObject;
+    _dataObject.flagged = YES;
+    [self performSegueWithIdentifier:@"reportSegue" sender:self];
+}
+
+// In a storyboard-based application, you will often want to do a little preparation before navigation
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    AFHReportViewController *reportVC = [segue destinationViewController];
+    reportVC.dataObject = _dataObject;
 }
 
 @end
