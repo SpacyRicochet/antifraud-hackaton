@@ -1,5 +1,5 @@
 //
-//  AFHDetailViewController.h
+//  AFHReportViewController.h
 //  AntiFraudeHackathon
 //
 //  Created by Jonas Treub on 12/04/14.
@@ -9,9 +9,8 @@
 #import <UIKit/UIKit.h>
 @class AFHDataObject;
 
-@interface AFHDetailViewController : UIViewController
+@interface AFHReportViewController : UIViewController
 
 @property (nonatomic, retain) AFHDataObject *dataObject;
-@property (nonatomic, retain) UIImage *image;
 
 @end

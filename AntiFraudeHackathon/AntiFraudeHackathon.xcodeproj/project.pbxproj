@@ -60,6 +60,8 @@
 		ABE7F2EC18F97C40001DCE83 /* AFHDataObject.m in Sources */ = {isa = PBXBuildFile; fileRef = ABE7F2EB18F97C40001DCE83 /* AFHDataObject.m */; };
 		ABE7F2EE18F99CFF001DCE83 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ABE7F2ED18F99CFF001DCE83 /* MapKit.framework */; };
 		ABE7F2F318F99D7C001DCE83 /* AFHDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ABE7F2F218F99D7C001DCE83 /* AFHDetailViewController.m */; };
+		ABE7F2F918F9C45E001DCE83 /* AFHNavViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ABE7F2F818F9C45E001DCE83 /* AFHNavViewController.m */; };
+		ABE7F2FC18F9C63D001DCE83 /* AFHReportViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ABE7F2FB18F9C63D001DCE83 /* AFHReportViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -129,6 +131,10 @@
 		ABE7F2ED18F99CFF001DCE83 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		ABE7F2F118F99D7C001DCE83 /* AFHDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHDetailViewController.h; sourceTree = "<group>"; };
 		ABE7F2F218F99D7C001DCE83 /* AFHDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHDetailViewController.m; sourceTree = "<group>"; };
+		ABE7F2F718F9C45E001DCE83 /* AFHNavViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHNavViewController.h; sourceTree = "<group>"; };
+		ABE7F2F818F9C45E001DCE83 /* AFHNavViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHNavViewController.m; sourceTree = "<group>"; };
+		ABE7F2FA18F9C63D001DCE83 /* AFHReportViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHReportViewController.h; sourceTree = "<group>"; };
+		ABE7F2FB18F9C63D001DCE83 /* AFHReportViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHReportViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -331,12 +337,16 @@
 		ABE7F2F018F99D6C001DCE83 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				ABE7F2F718F9C45E001DCE83 /* AFHNavViewController.h */,
+				ABE7F2F818F9C45E001DCE83 /* AFHNavViewController.m */,
 				23CCA46018F9294A00C4EEE8 /* AFHViewController.h */,
 				23CCA46118F9294A00C4EEE8 /* AFHViewController.m */,
 				ABE7F2E718F97BBB001DCE83 /* AFHTableViewController.h */,
 				ABE7F2E818F97BBB001DCE83 /* AFHTableViewController.m */,
 				ABE7F2F118F99D7C001DCE83 /* AFHDetailViewController.h */,
 				ABE7F2F218F99D7C001DCE83 /* AFHDetailViewController.m */,
+				ABE7F2FA18F9C63D001DCE83 /* AFHReportViewController.h */,
+				ABE7F2FB18F9C63D001DCE83 /* AFHReportViewController.m */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -460,12 +470,14 @@
 				23CCA46218F9294A00C4EEE8 /* AFHViewController.m in Sources */,
 				230764FE18F9DC6B0023D708 /* AFHCoreDataChief.m in Sources */,
 				2307650B18F9E3A50023D708 /* NWCoreData.m in Sources */,
+				ABE7F2F918F9C45E001DCE83 /* AFHNavViewController.m in Sources */,
 				ABE7F2F318F99D7C001DCE83 /* AFHDetailViewController.m in Sources */,
 				2307651418F9F8A50023D708 /* AFHParseConstants.m in Sources */,
 				ABE7F2E918F97BBB001DCE83 /* AFHTableViewController.m in Sources */,
 				230764E218F9C0070023D708 /* AFHActivity.m in Sources */,
 				ABE7F2EC18F97C40001DCE83 /* AFHDataObject.m in Sources */,
 				23CCA45C18F9294A00C4EEE8 /* AFHAppDelegate.m in Sources */,
+				ABE7F2FC18F9C63D001DCE83 /* AFHReportViewController.m in Sources */,
 				23CCA45818F9294A00C4EEE8 /* main.m in Sources */,
 				2307651118F9F79C0023D708 /* AFHActivity+Parse.m in Sources */,
 				2307650218F9DC980023D708 /* AFHParseChief.m in Sources */,

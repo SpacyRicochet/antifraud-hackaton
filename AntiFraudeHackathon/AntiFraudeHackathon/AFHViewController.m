@@ -62,8 +62,8 @@
         [self constraintRightOfView:self.view withOtherView:textField andOffset:16];
         [self constraintHeight:44 OfView:textField];
         textField.layer.cornerRadius = 5;
-        textField.layer.borderColor = [UIColor blackColor].CGColor;
-        textField.layer.borderWidth = 2;
+        textField.layer.borderColor = [UIColor colorWithWhite:.8 alpha:1].CGColor;
+        textField.layer.borderWidth = 1;
         textField.autocapitalizationType =UITextAutocapitalizationTypeWords;
         textField.delegate = self;
         [_userNameField setEnablesReturnKeyAutomatically:YES];
@@ -83,7 +83,7 @@
         [self constraintHeight:44 OfView:button];
         button.layer.cornerRadius = 5;
         
-        button.backgroundColor = [UIColor blackColor];
+        button.backgroundColor = [UIColor colorWithRed:0.07 green:0.2 blue:0.37 alpha:1];
     }
     
     _userNameField.returnKeyType = UIReturnKeyNext;
