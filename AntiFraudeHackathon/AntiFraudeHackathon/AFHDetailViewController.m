@@ -30,13 +30,23 @@
     
     _descriptionLabel.text = _dataObject.description;
     _accessorLabel.text = _dataObject.accessor;
+    NSDateFormatter *dateFormatter = [NSDateFormatter new];
+    [dateFormatter setTimeStyle:NSDateFormatterMediumStyle];
+    _timeLabel.text = [dateFormatter stringFromDate:_dataObject.timeStamp];
 }
 
 - (void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
     
+    MKPointAnnotation *annotation = [MKPointAnnotation new];
     
+    annotation.title = _dataObject.accessor;
+    annotation.coordinate = CLLocationCoordinate2DMake(52.0114726,4.3544441);
+    
+    [_mapView addAnnotation:annotation];
+    [_mapView showAnnotations:@[annotation] animated:YES];
+    [_mapView selectAnnotation:annotation animated:YES];
 }
 
 - (void)didReceiveMemoryWarning
@@ -49,16 +59,5 @@
 {
     _dataObject = dataObject;
 }
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end
