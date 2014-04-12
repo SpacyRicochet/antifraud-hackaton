@@ -77,7 +77,7 @@
     
     [self setupData];
     
-    self.tableView.rowHeight = 54;
+    self.tableView.rowHeight = 60;
     
     self.navigationItem.hidesBackButton = YES;
 }
@@ -115,6 +115,24 @@
     NSDateFormatter *dateFormatter = [NSDateFormatter new];
     [dateFormatter setTimeStyle:NSDateFormatterMediumStyle];
     cell.detailTextLabel.text = [dateFormatter stringFromDate:dataObject.timeStamp];
+    
+    int i = indexPath.row % 4;
+    
+    switch (i) {
+        case 0:{
+            [cell.imageView setImage:[UIImage imageNamed:@"Creditcard"]];
+        }   break;
+        case 1:{
+            [cell.imageView setImage:[UIImage imageNamed:@"doctor2"]];
+        }   break;
+        case 2:{
+            [cell.imageView setImage:[UIImage imageNamed:@"Home"]];
+        }   break;
+        case 3:{
+            [cell.imageView setImage:[UIImage imageNamed:@"Law"]];
+        }   break;
+    }
+    
     return cell;
 }
 
