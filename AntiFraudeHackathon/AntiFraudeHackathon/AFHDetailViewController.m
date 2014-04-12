@@ -18,6 +18,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *timeLabel;
 @property (weak, nonatomic) IBOutlet UIButton *reportButton;
 @property (weak, nonatomic) IBOutlet MKMapView *mapView;
+@property (weak, nonatomic) IBOutlet UIImageView *icon;
 
 @end
 
@@ -34,8 +35,10 @@
     NSDateFormatter *dateFormatter = [NSDateFormatter new];
     [dateFormatter setTimeStyle:NSDateFormatterMediumStyle];
     _timeLabel.text = [dateFormatter stringFromDate:_dataObject.timeStamp];
+    [_icon setImage:_image];
     
     [_reportButton addTarget:self action:@selector(reportButtonPressed) forControlEvents:UIControlEventTouchUpInside];
+    _reportButton.layer.cornerRadius = 5;
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -44,7 +47,7 @@
     
     if (_dataObject.flagged)
     {
-        [_reportButton setTitle:NSLocalizedString(@"Probleem gemeld", nil) forState:UIControlStateNormal];
+        [_reportButton setTitle:NSLocalizedString(@"  Probleem gemeld  ", nil) forState:UIControlStateNormal];
     }
 }
 

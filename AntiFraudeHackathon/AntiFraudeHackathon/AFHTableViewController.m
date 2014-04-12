@@ -149,6 +149,8 @@
 {
     AFHDetailViewController *detailVC = [segue destinationViewController];
     detailVC.dataObject = [_dataObjects objectAtIndex:_selectedRow];
+    UITableViewCell *cell = (UITableViewCell *)[self.tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:_selectedRow inSection:0]];
+    detailVC.image = cell.imageView.image;
 }
 
 @end

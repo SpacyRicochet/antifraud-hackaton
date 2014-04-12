@@ -98,14 +98,14 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dKh-Ym-Tod">
-                                <rect key="frame" x="20" y="20" width="280" height="23"/>
+                                <rect key="frame" x="20" y="20" width="222" height="23"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Accessor" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HTW-PG-CoW">
-                                <rect key="frame" x="20" y="49" width="280" height="21"/>
+                                <rect key="frame" x="20" y="49" width="222" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="highlightedColor"/>
@@ -117,28 +117,38 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="YKN-Dg-cFH">
-                                <rect key="frame" x="0.0" y="163" width="320" height="405"/>
+                                <rect key="frame" x="0.0" y="169" width="320" height="399"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                             </mapView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b9X-Ug-cab">
-                                <rect key="frame" x="20" y="107" width="280" height="48"/>
+                                <rect key="frame" x="20" y="113" width="125" height="40"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="48" id="4LD-bd-GSa"/>
-                                    <constraint firstAttribute="width" constant="280" id="6aS-WT-9yR"/>
+                                    <constraint firstAttribute="height" constant="40" id="4LD-bd-GSa"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="112" id="Gfz-JN-YqE"/>
                                 </constraints>
-                                <state key="normal" title="Meld probleem!">
-                                    <color key="titleColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="  Meld probleem!  ">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="qK0-eC-ud6">
+                                <rect key="frame" x="250" y="20" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="3DD-KA-hC5"/>
+                                    <constraint firstAttribute="height" constant="50" id="jmH-hn-dzR"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="Nv6-cX-Ady" firstAttribute="top" secondItem="YKN-Dg-cFH" secondAttribute="bottom" id="3Nf-sV-c5z"/>
-                            <constraint firstAttribute="trailing" secondItem="HTW-PG-CoW" secondAttribute="trailing" constant="20" id="3sw-B4-8H8"/>
+                            <constraint firstItem="qK0-eC-ud6" firstAttribute="leading" secondItem="dKh-Ym-Tod" secondAttribute="trailing" constant="8" id="7d2-g7-5Bf"/>
                             <constraint firstItem="dKh-Ym-Tod" firstAttribute="leading" secondItem="ruS-6f-AR8" secondAttribute="leading" constant="20" id="8gx-Sk-N2J"/>
-                            <constraint firstItem="YKN-Dg-cFH" firstAttribute="top" secondItem="b9X-Ug-cab" secondAttribute="bottom" constant="8" id="HXu-pO-5Qr"/>
+                            <constraint firstItem="qK0-eC-ud6" firstAttribute="leading" secondItem="HTW-PG-CoW" secondAttribute="trailing" constant="8" id="GKP-jr-51t"/>
+                            <constraint firstItem="YKN-Dg-cFH" firstAttribute="top" secondItem="b9X-Ug-cab" secondAttribute="bottom" constant="16" id="HXu-pO-5Qr"/>
                             <constraint firstAttribute="trailing" secondItem="YKN-Dg-cFH" secondAttribute="trailing" id="Qfd-aX-fhO"/>
                             <constraint firstAttribute="trailing" secondItem="swV-zU-208" secondAttribute="trailing" constant="20" id="UXd-vf-YdT"/>
                             <constraint firstItem="dKh-Ym-Tod" firstAttribute="top" secondItem="Wov-a4-3oo" secondAttribute="bottom" constant="20" id="UpE-SM-OzL"/>
@@ -147,10 +157,10 @@
                             <constraint firstItem="swV-zU-208" firstAttribute="top" secondItem="HTW-PG-CoW" secondAttribute="bottom" constant="8" id="asC-aC-el8"/>
                             <constraint firstItem="HTW-PG-CoW" firstAttribute="top" secondItem="dKh-Ym-Tod" secondAttribute="bottom" constant="6" id="ecP-xJ-Veq"/>
                             <constraint firstItem="YKN-Dg-cFH" firstAttribute="leading" secondItem="ruS-6f-AR8" secondAttribute="leading" id="gVk-oV-vsJ"/>
-                            <constraint firstItem="b9X-Ug-cab" firstAttribute="top" secondItem="swV-zU-208" secondAttribute="bottom" constant="8" id="hig-1g-vmg"/>
-                            <constraint firstAttribute="trailing" secondItem="b9X-Ug-cab" secondAttribute="trailing" constant="20" id="kGe-G5-q4l"/>
+                            <constraint firstItem="b9X-Ug-cab" firstAttribute="top" secondItem="swV-zU-208" secondAttribute="bottom" constant="14" id="hig-1g-vmg"/>
+                            <constraint firstItem="qK0-eC-ud6" firstAttribute="top" secondItem="Wov-a4-3oo" secondAttribute="bottom" constant="20" id="mTa-UJ-Kkp"/>
                             <constraint firstItem="swV-zU-208" firstAttribute="leading" secondItem="ruS-6f-AR8" secondAttribute="leading" constant="20" id="qti-aC-1sz"/>
-                            <constraint firstAttribute="trailing" secondItem="dKh-Ym-Tod" secondAttribute="trailing" constant="20" id="z6y-DU-UrN"/>
+                            <constraint firstAttribute="trailing" secondItem="qK0-eC-ud6" secondAttribute="trailing" constant="20" id="tsz-bW-P1K"/>
                         </constraints>
                     </view>
                     <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
@@ -161,6 +171,7 @@
                     <connections>
                         <outlet property="accessorLabel" destination="HTW-PG-CoW" id="Nhr-oN-hGw"/>
                         <outlet property="descriptionLabel" destination="dKh-Ym-Tod" id="cVi-jz-weQ"/>
+                        <outlet property="icon" destination="qK0-eC-ud6" id="V2g-RD-rbI"/>
                         <outlet property="mapView" destination="YKN-Dg-cFH" id="cM1-lP-e4F"/>
                         <outlet property="reportButton" destination="b9X-Ug-cab" id="9fu-tt-nLY"/>
                         <outlet property="timeLabel" destination="swV-zU-208" id="dO4-Lu-I9R"/>
