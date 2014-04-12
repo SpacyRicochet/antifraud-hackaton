@@ -1,0 +1,14 @@
+{
+    "applications": {
+        "AntiFraude": {
+            "applicationId": "X5OVmxuKqQDZ43ibTIwdTmrJN15RTEzjbFAP74yJ", 
+            "masterKey": "oSpfJvUZwkN7E9dxfqtRVoKw5L7VTHBDvZdinjPH"
+        }, 
+        "_default": {
+            "link": "AntiFraude"
+        }
+    }, 
+    "global": {
+        "parseVersion": "1.2.18"
+    }
+}
