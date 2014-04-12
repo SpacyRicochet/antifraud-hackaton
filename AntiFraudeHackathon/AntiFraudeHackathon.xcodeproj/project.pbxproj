@@ -21,6 +21,10 @@
 		23CCA46D18F9294A00C4EEE8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23CCA44F18F9294A00C4EEE8 /* UIKit.framework */; };
 		23CCA47518F9294A00C4EEE8 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 23CCA47318F9294A00C4EEE8 /* InfoPlist.strings */; };
 		23CCA47718F9294A00C4EEE8 /* AntiFraudeHackathonTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 23CCA47618F9294A00C4EEE8 /* AntiFraudeHackathonTests.m */; };
+		ABE7F2E918F97BBB001DCE83 /* AFHTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ABE7F2E818F97BBB001DCE83 /* AFHTableViewController.m */; };
+		ABE7F2EC18F97C40001DCE83 /* AFHDataObject.m in Sources */ = {isa = PBXBuildFile; fileRef = ABE7F2EB18F97C40001DCE83 /* AFHDataObject.m */; };
+		ABE7F2EE18F99CFF001DCE83 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ABE7F2ED18F99CFF001DCE83 /* MapKit.framework */; };
+		ABE7F2F318F99D7C001DCE83 /* AFHDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ABE7F2F218F99D7C001DCE83 /* AFHDetailViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +57,13 @@
 		23CCA47218F9294A00C4EEE8 /* AntiFraudeHackathonTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "AntiFraudeHackathonTests-Info.plist"; sourceTree = "<group>"; };
 		23CCA47418F9294A00C4EEE8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		23CCA47618F9294A00C4EEE8 /* AntiFraudeHackathonTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AntiFraudeHackathonTests.m; sourceTree = "<group>"; };
+		ABE7F2E718F97BBB001DCE83 /* AFHTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTableViewController.h; sourceTree = "<group>"; };
+		ABE7F2E818F97BBB001DCE83 /* AFHTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTableViewController.m; sourceTree = "<group>"; };
+		ABE7F2EA18F97C40001DCE83 /* AFHDataObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHDataObject.h; sourceTree = "<group>"; };
+		ABE7F2EB18F97C40001DCE83 /* AFHDataObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHDataObject.m; sourceTree = "<group>"; };
+		ABE7F2ED18F99CFF001DCE83 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		ABE7F2F118F99D7C001DCE83 /* AFHDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHDetailViewController.h; sourceTree = "<group>"; };
+		ABE7F2F218F99D7C001DCE83 /* AFHDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHDetailViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +71,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ABE7F2EE18F99CFF001DCE83 /* MapKit.framework in Frameworks */,
 				23CCA44E18F9294A00C4EEE8 /* CoreGraphics.framework in Frameworks */,
 				23CCA45018F9294A00C4EEE8 /* UIKit.framework in Frameworks */,
 				23CCA44C18F9294A00C4EEE8 /* Foundation.framework in Frameworks */,
@@ -101,6 +113,7 @@
 		23CCA44A18F9294A00C4EEE8 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				ABE7F2ED18F99CFF001DCE83 /* MapKit.framework */,
 				23CCA44B18F9294A00C4EEE8 /* Foundation.framework */,
 				23CCA44D18F9294A00C4EEE8 /* CoreGraphics.framework */,
 				23CCA44F18F9294A00C4EEE8 /* UIKit.framework */,
@@ -115,8 +128,8 @@
 				23CCA45A18F9294A00C4EEE8 /* AFHAppDelegate.h */,
 				23CCA45B18F9294A00C4EEE8 /* AFHAppDelegate.m */,
 				23CCA45D18F9294A00C4EEE8 /* Main.storyboard */,
-				23CCA46018F9294A00C4EEE8 /* AFHViewController.h */,
-				23CCA46118F9294A00C4EEE8 /* AFHViewController.m */,
+				ABE7F2F018F99D6C001DCE83 /* View Controllers */,
+				ABE7F2EF18F99D62001DCE83 /* Model */,
 				23CCA46318F9294A00C4EEE8 /* Images.xcassets */,
 				23CCA45218F9294A00C4EEE8 /* Supporting Files */,
 			);
@@ -150,6 +163,28 @@
 				23CCA47318F9294A00C4EEE8 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		ABE7F2EF18F99D62001DCE83 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				ABE7F2EA18F97C40001DCE83 /* AFHDataObject.h */,
+				ABE7F2EB18F97C40001DCE83 /* AFHDataObject.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		ABE7F2F018F99D6C001DCE83 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				23CCA46018F9294A00C4EEE8 /* AFHViewController.h */,
+				23CCA46118F9294A00C4EEE8 /* AFHViewController.m */,
+				ABE7F2E718F97BBB001DCE83 /* AFHTableViewController.h */,
+				ABE7F2E818F97BBB001DCE83 /* AFHTableViewController.m */,
+				ABE7F2F118F99D7C001DCE83 /* AFHDetailViewController.h */,
+				ABE7F2F218F99D7C001DCE83 /* AFHDetailViewController.m */,
+			);
+			name = "View Controllers";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -251,6 +286,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				23CCA46218F9294A00C4EEE8 /* AFHViewController.m in Sources */,
+				ABE7F2F318F99D7C001DCE83 /* AFHDetailViewController.m in Sources */,
+				ABE7F2E918F97BBB001DCE83 /* AFHTableViewController.m in Sources */,
+				ABE7F2EC18F97C40001DCE83 /* AFHDataObject.m in Sources */,
 				23CCA45C18F9294A00C4EEE8 /* AFHAppDelegate.m in Sources */,
 				23CCA45818F9294A00C4EEE8 /* main.m in Sources */,
 			);
@@ -457,6 +495,7 @@
 				23CCA47C18F9294A00C4EEE8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		23CCA47D18F9294A00C4EEE8 /* Build configuration list for PBXNativeTarget "AntiFraudeHackathonTests" */ = {
 			isa = XCConfigurationList;
@@ -465,6 +504,7 @@
 				23CCA47F18F9294A00C4EEE8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
