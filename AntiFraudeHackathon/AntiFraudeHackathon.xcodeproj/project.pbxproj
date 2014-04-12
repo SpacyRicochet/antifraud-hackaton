@@ -457,6 +457,7 @@
 				23CCA47C18F9294A00C4EEE8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		23CCA47D18F9294A00C4EEE8 /* Build configuration list for PBXNativeTarget "AntiFraudeHackathonTests" */ = {
 			isa = XCConfigurationList;
@@ -465,6 +466,7 @@
 				23CCA47F18F9294A00C4EEE8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
