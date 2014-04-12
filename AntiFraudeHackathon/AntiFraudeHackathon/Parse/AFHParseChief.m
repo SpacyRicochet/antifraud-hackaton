@@ -34,9 +34,12 @@
 - (void)didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken
 {
     // Store the deviceToken in the current installation and save it to Parse.
-  PFInstallation *currentInstallation = [PFInstallation currentInstallation];
-  [currentInstallation setDeviceTokenFromData:deviceToken];
-  [currentInstallation saveInBackground];
+    PFInstallation *currentInstallation = [PFInstallation currentInstallation];
+    [currentInstallation setDeviceTokenFromData:deviceToken];
+    
+    [currentInstallation addUniqueObject:@"Activities" forKey:@"channels"];
+    
+    [currentInstallation saveInBackground];
 }
 
 - (void)didReceiveRemoteNotification:(NSDictionary *)userInfo {

@@ -34,7 +34,7 @@
 		230764F418F9C1AB0023D708 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 230764F318F9C1AB0023D708 /* Security.framework */; };
 		230764F618F9C1B20023D708 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 230764F518F9C1B20023D708 /* StoreKit.framework */; };
 		230764F818F9C1C90023D708 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 230764F718F9C1C90023D708 /* SystemConfiguration.framework */; };
-		230764FB18F9C1EB0023D708 /* AFHParseChief.m in Sources */ = {isa = PBXBuildFile; fileRef = 230764FA18F9C1EB0023D708 /* AFHParseChief.m */; };
+		2307650218F9DC980023D708 /* AFHParseChief.m in Sources */ = {isa = PBXBuildFile; fileRef = 2307650118F9DC980023D708 /* AFHParseChief.m */; };
 		23CCA44C18F9294A00C4EEE8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23CCA44B18F9294A00C4EEE8 /* Foundation.framework */; };
 		23CCA44E18F9294A00C4EEE8 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23CCA44D18F9294A00C4EEE8 /* CoreGraphics.framework */; };
 		23CCA45018F9294A00C4EEE8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23CCA44F18F9294A00C4EEE8 /* UIKit.framework */; };
@@ -81,8 +81,8 @@
 		230764F318F9C1AB0023D708 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		230764F518F9C1B20023D708 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		230764F718F9C1C90023D708 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
-		230764F918F9C1EB0023D708 /* AFHParseChief.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHParseChief.h; sourceTree = "<group>"; };
-		230764FA18F9C1EB0023D708 /* AFHParseChief.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHParseChief.m; sourceTree = "<group>"; };
+		2307650018F9DC980023D708 /* AFHParseChief.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHParseChief.h; sourceTree = "<group>"; };
+		2307650118F9DC980023D708 /* AFHParseChief.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHParseChief.m; sourceTree = "<group>"; };
 		23CCA44818F9294A00C4EEE8 /* AntiFraudeHackathon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AntiFraudeHackathon.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		23CCA44B18F9294A00C4EEE8 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		23CCA44D18F9294A00C4EEE8 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -182,6 +182,15 @@
 			path = 3rdParty;
 			sourceTree = "<group>";
 		};
+		230764FF18F9DC980023D708 /* Parse */ = {
+			isa = PBXGroup;
+			children = (
+				2307650018F9DC980023D708 /* AFHParseChief.h */,
+				2307650118F9DC980023D708 /* AFHParseChief.m */,
+			);
+			path = Parse;
+			sourceTree = "<group>";
+		};
 		23CCA43F18F9294A00C4EEE8 = {
 			isa = PBXGroup;
 			children = (
@@ -226,16 +235,15 @@
 		23CCA45118F9294A00C4EEE8 /* AntiFraudeHackathon */ = {
 			isa = PBXGroup;
 			children = (
+				230764FF18F9DC980023D708 /* Parse */,
 				230764D318F9BA850023D708 /* CoreData */,
 				23CCA45A18F9294A00C4EEE8 /* AFHAppDelegate.h */,
 				23CCA45B18F9294A00C4EEE8 /* AFHAppDelegate.m */,
 				23CCA45D18F9294A00C4EEE8 /* Main.storyboard */,
 				ABE7F2F018F99D6C001DCE83 /* View Controllers */,
 				ABE7F2EF18F99D62001DCE83 /* Model */,
-				23CCA46318F9294A00C4EEE8 /* Images.xcassets */,
 				23CCA45218F9294A00C4EEE8 /* Supporting Files */,
-				230764F918F9C1EB0023D708 /* AFHParseChief.h */,
-				230764FA18F9C1EB0023D708 /* AFHParseChief.m */,
+				23CCA46318F9294A00C4EEE8 /* Images.xcassets */,
 			);
 			path = AntiFraudeHackathon;
 			sourceTree = "<group>";
@@ -411,10 +419,10 @@
 				ABE7F2F318F99D7C001DCE83 /* AFHDetailViewController.m in Sources */,
 				ABE7F2E918F97BBB001DCE83 /* AFHTableViewController.m in Sources */,
 				230764E218F9C0070023D708 /* AFHActivity.m in Sources */,
-				230764FB18F9C1EB0023D708 /* AFHParseChief.m in Sources */,
 				ABE7F2EC18F97C40001DCE83 /* AFHDataObject.m in Sources */,
 				23CCA45C18F9294A00C4EEE8 /* AFHAppDelegate.m in Sources */,
 				23CCA45818F9294A00C4EEE8 /* main.m in Sources */,
+				2307650218F9DC980023D708 /* AFHParseChief.m in Sources */,
 				230764E318F9C0070023D708 /* _AFHActivity.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
