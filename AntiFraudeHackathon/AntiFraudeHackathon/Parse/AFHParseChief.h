@@ -10,7 +10,7 @@
 
 @interface AFHParseChief : NSObject
 
-+ (instancetype)shared;
++ (AFHParseChief *)shared;
 
 - (void)didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken;
 - (void)didReceiveRemoteNotification:(NSDictionary *)userInfo;

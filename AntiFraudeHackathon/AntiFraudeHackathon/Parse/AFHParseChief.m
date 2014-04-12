@@ -11,7 +11,7 @@
 
 @implementation AFHParseChief
 
-+ (instancetype)shared
++ (AFHParseChief *)shared
 {
     static AFHParseChief *result = nil;
     static dispatch_once_t onceToken;
