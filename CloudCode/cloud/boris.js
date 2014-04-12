@@ -3,13 +3,12 @@
 Parse.Cloud.define("NestedActivity", function(request, response) {
 	var Activity = Parse.Object.extend("Activity");
 	var query = new Parse.Query(Activity);
-	query.equalTo("objectId", request.params.objectId);
-	query.first({
+	query.get(request.params.objectId, {
 		success: function(act) {
 			response.success(act);
 		},
 		error: function(act, error) {
-			response.error("Problem");
+			response.error(error);
 		}
 	});
 });
