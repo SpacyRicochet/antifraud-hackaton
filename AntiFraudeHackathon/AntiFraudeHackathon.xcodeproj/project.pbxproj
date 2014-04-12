@@ -6,7 +6,24 @@
 	objectVersion = 46;
 	objects = {
 
+/* Begin PBXAggregateTarget section */
+		230764D718F9BF010023D708 /* Mogen */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 230764D818F9BF010023D708 /* Build configuration list for PBXAggregateTarget "Mogen" */;
+			buildPhases = (
+				230764DB18F9BF080023D708 /* ShellScript */,
+			);
+			dependencies = (
+			);
+			name = Mogen;
+			productName = Mogen;
+		};
+/* End PBXAggregateTarget section */
+
 /* Begin PBXBuildFile section */
+		230764D618F9BA9A0023D708 /* AntiFraude.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 230764D418F9BA9A0023D708 /* AntiFraude.xcdatamodeld */; };
+		230764E218F9C0070023D708 /* AFHActivity.m in Sources */ = {isa = PBXBuildFile; fileRef = 230764DE18F9C0070023D708 /* AFHActivity.m */; };
+		230764E318F9C0070023D708 /* _AFHActivity.m in Sources */ = {isa = PBXBuildFile; fileRef = 230764E118F9C0070023D708 /* _AFHActivity.m */; };
 		23CCA44C18F9294A00C4EEE8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23CCA44B18F9294A00C4EEE8 /* Foundation.framework */; };
 		23CCA44E18F9294A00C4EEE8 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23CCA44D18F9294A00C4EEE8 /* CoreGraphics.framework */; };
 		23CCA45018F9294A00C4EEE8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23CCA44F18F9294A00C4EEE8 /* UIKit.framework */; };
@@ -38,6 +55,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		230764D518F9BA9A0023D708 /* AntiFraude.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = AntiFraude.xcdatamodel; sourceTree = "<group>"; };
+		230764DD18F9C0070023D708 /* AFHActivity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHActivity.h; sourceTree = "<group>"; };
+		230764DE18F9C0070023D708 /* AFHActivity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHActivity.m; sourceTree = "<group>"; };
+		230764E018F9C0070023D708 /* _AFHActivity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _AFHActivity.h; sourceTree = "<group>"; };
+		230764E118F9C0070023D708 /* _AFHActivity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _AFHActivity.m; sourceTree = "<group>"; };
 		23CCA44818F9294A00C4EEE8 /* AntiFraudeHackathon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AntiFraudeHackathon.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		23CCA44B18F9294A00C4EEE8 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		23CCA44D18F9294A00C4EEE8 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -91,6 +113,34 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		230764D318F9BA850023D708 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				230764DC18F9C0070023D708 /* Human */,
+				230764DF18F9C0070023D708 /* Machine */,
+				230764D418F9BA9A0023D708 /* AntiFraude.xcdatamodeld */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
+		230764DC18F9C0070023D708 /* Human */ = {
+			isa = PBXGroup;
+			children = (
+				230764DD18F9C0070023D708 /* AFHActivity.h */,
+				230764DE18F9C0070023D708 /* AFHActivity.m */,
+			);
+			path = Human;
+			sourceTree = "<group>";
+		};
+		230764DF18F9C0070023D708 /* Machine */ = {
+			isa = PBXGroup;
+			children = (
+				230764E018F9C0070023D708 /* _AFHActivity.h */,
+				230764E118F9C0070023D708 /* _AFHActivity.m */,
+			);
+			path = Machine;
+			sourceTree = "<group>";
+		};
 		23CCA43F18F9294A00C4EEE8 = {
 			isa = PBXGroup;
 			children = (
@@ -125,6 +175,7 @@
 		23CCA45118F9294A00C4EEE8 /* AntiFraudeHackathon */ = {
 			isa = PBXGroup;
 			children = (
+				230764D318F9BA850023D708 /* CoreData */,
 				23CCA45A18F9294A00C4EEE8 /* AFHAppDelegate.h */,
 				23CCA45B18F9294A00C4EEE8 /* AFHAppDelegate.m */,
 				23CCA45D18F9294A00C4EEE8 /* Main.storyboard */,
@@ -255,6 +306,7 @@
 			targets = (
 				23CCA44718F9294A00C4EEE8 /* AntiFraudeHackathon */,
 				23CCA46818F9294A00C4EEE8 /* AntiFraudeHackathonTests */,
+				230764D718F9BF010023D708 /* Mogen */,
 			);
 		};
 /* End PBXProject section */
@@ -280,17 +332,36 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		230764DB18F9BF080023D708 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "#!/bin/sh\n\nPATH=${PATH}:/usr/local/bin\n\nmogenerator -m AntiFraudeHackathon/CoreData/AntiFraude.xcdatamodeld/AntiFraude.xcdatamodel -M AntiFraudeHackathon/CoreData/Machine -H AntiFraudeHackathon/CoreData/Human --template-var arc=true\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		23CCA44418F9294A00C4EEE8 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				230764D618F9BA9A0023D708 /* AntiFraude.xcdatamodeld in Sources */,
 				23CCA46218F9294A00C4EEE8 /* AFHViewController.m in Sources */,
 				ABE7F2F318F99D7C001DCE83 /* AFHDetailViewController.m in Sources */,
 				ABE7F2E918F97BBB001DCE83 /* AFHTableViewController.m in Sources */,
+				230764E218F9C0070023D708 /* AFHActivity.m in Sources */,
 				ABE7F2EC18F97C40001DCE83 /* AFHDataObject.m in Sources */,
 				23CCA45C18F9294A00C4EEE8 /* AFHAppDelegate.m in Sources */,
 				23CCA45818F9294A00C4EEE8 /* main.m in Sources */,
+				230764E318F9C0070023D708 /* _AFHActivity.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -340,6 +411,20 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		230764D918F9BF010023D708 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		230764DA18F9BF010023D708 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 		23CCA47818F9294A00C4EEE8 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -479,6 +564,14 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		230764D818F9BF010023D708 /* Build configuration list for PBXAggregateTarget "Mogen" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				230764D918F9BF010023D708 /* Debug */,
+				230764DA18F9BF010023D708 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		23CCA44318F9294A00C4EEE8 /* Build configuration list for PBXProject "AntiFraudeHackathon" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -507,6 +600,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		230764D418F9BA9A0023D708 /* AntiFraude.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				230764D518F9BA9A0023D708 /* AntiFraude.xcdatamodel */,
+			);
+			currentVersion = 230764D518F9BA9A0023D708 /* AntiFraude.xcdatamodel */;
+			path = AntiFraude.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 23CCA44018F9294A00C4EEE8 /* Project object */;
 }
