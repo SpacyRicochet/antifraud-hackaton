@@ -7,12 +7,23 @@
 //
 
 #import "AFHAppDelegate.h"
+#import "AFHParseChief.h"
+
+@interface AFHAppDelegate ()
+
+@property (nonatomic, strong) AFHParseChief *parseChief;
+
+@end
 
 @implementation AFHAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+    
+    // Setup Parse
+    self.parseChief = [AFHParseChief shared];
+    
     return YES;
 }
 							
@@ -41,6 +52,18 @@
 - (void)applicationWillTerminate:(UIApplication *)application
 {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+}
+
+#pragma mark - Push notifications
+
+- (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken
+{
+    [self.parseChief didRegisterForRemoteNotificationsWithDeviceToken:deviceToken];
+}
+
+- (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo
+{
+    [self.parseChief didReceiveRemoteNotification:userInfo];
 }
 
 @end

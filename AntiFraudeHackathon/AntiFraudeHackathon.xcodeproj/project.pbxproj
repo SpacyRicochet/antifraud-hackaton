@@ -24,6 +24,17 @@
 		230764D618F9BA9A0023D708 /* AntiFraude.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 230764D418F9BA9A0023D708 /* AntiFraude.xcdatamodeld */; };
 		230764E218F9C0070023D708 /* AFHActivity.m in Sources */ = {isa = PBXBuildFile; fileRef = 230764DE18F9C0070023D708 /* AFHActivity.m */; };
 		230764E318F9C0070023D708 /* _AFHActivity.m in Sources */ = {isa = PBXBuildFile; fileRef = 230764E118F9C0070023D708 /* _AFHActivity.m */; };
+		230764E618F9C15E0023D708 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 230764E518F9C15E0023D708 /* Parse.framework */; };
+		230764E818F9C17D0023D708 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 230764E718F9C17D0023D708 /* AudioToolbox.framework */; };
+		230764EA18F9C1850023D708 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 230764E918F9C1850023D708 /* CFNetwork.framework */; };
+		230764EC18F9C1920023D708 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 230764EB18F9C1920023D708 /* CoreLocation.framework */; };
+		230764EE18F9C1980023D708 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 230764ED18F9C1980023D708 /* libz.dylib */; };
+		230764F018F9C19E0023D708 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 230764EF18F9C19E0023D708 /* MobileCoreServices.framework */; };
+		230764F218F9C1A30023D708 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 230764F118F9C1A30023D708 /* QuartzCore.framework */; };
+		230764F418F9C1AB0023D708 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 230764F318F9C1AB0023D708 /* Security.framework */; };
+		230764F618F9C1B20023D708 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 230764F518F9C1B20023D708 /* StoreKit.framework */; };
+		230764F818F9C1C90023D708 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 230764F718F9C1C90023D708 /* SystemConfiguration.framework */; };
+		230764FB18F9C1EB0023D708 /* AFHParseChief.m in Sources */ = {isa = PBXBuildFile; fileRef = 230764FA18F9C1EB0023D708 /* AFHParseChief.m */; };
 		23CCA44C18F9294A00C4EEE8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23CCA44B18F9294A00C4EEE8 /* Foundation.framework */; };
 		23CCA44E18F9294A00C4EEE8 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23CCA44D18F9294A00C4EEE8 /* CoreGraphics.framework */; };
 		23CCA45018F9294A00C4EEE8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23CCA44F18F9294A00C4EEE8 /* UIKit.framework */; };
@@ -60,6 +71,18 @@
 		230764DE18F9C0070023D708 /* AFHActivity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHActivity.m; sourceTree = "<group>"; };
 		230764E018F9C0070023D708 /* _AFHActivity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _AFHActivity.h; sourceTree = "<group>"; };
 		230764E118F9C0070023D708 /* _AFHActivity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _AFHActivity.m; sourceTree = "<group>"; };
+		230764E518F9C15E0023D708 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
+		230764E718F9C17D0023D708 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		230764E918F9C1850023D708 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		230764EB18F9C1920023D708 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		230764ED18F9C1980023D708 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		230764EF18F9C19E0023D708 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		230764F118F9C1A30023D708 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		230764F318F9C1AB0023D708 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		230764F518F9C1B20023D708 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		230764F718F9C1C90023D708 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		230764F918F9C1EB0023D708 /* AFHParseChief.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHParseChief.h; sourceTree = "<group>"; };
+		230764FA18F9C1EB0023D708 /* AFHParseChief.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHParseChief.m; sourceTree = "<group>"; };
 		23CCA44818F9294A00C4EEE8 /* AntiFraudeHackathon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AntiFraudeHackathon.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		23CCA44B18F9294A00C4EEE8 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		23CCA44D18F9294A00C4EEE8 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -93,10 +116,20 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ABE7F2EE18F99CFF001DCE83 /* MapKit.framework in Frameworks */,
+				230764F818F9C1C90023D708 /* SystemConfiguration.framework in Frameworks */,
+				230764F618F9C1B20023D708 /* StoreKit.framework in Frameworks */,
+				230764F418F9C1AB0023D708 /* Security.framework in Frameworks */,
+				230764F218F9C1A30023D708 /* QuartzCore.framework in Frameworks */,
+				230764F018F9C19E0023D708 /* MobileCoreServices.framework in Frameworks */,
+				230764EE18F9C1980023D708 /* libz.dylib in Frameworks */,
+				230764EC18F9C1920023D708 /* CoreLocation.framework in Frameworks */,
 				23CCA44E18F9294A00C4EEE8 /* CoreGraphics.framework in Frameworks */,
+				230764EA18F9C1850023D708 /* CFNetwork.framework in Frameworks */,
+				230764E818F9C17D0023D708 /* AudioToolbox.framework in Frameworks */,
+				ABE7F2EE18F99CFF001DCE83 /* MapKit.framework in Frameworks */,
 				23CCA45018F9294A00C4EEE8 /* UIKit.framework in Frameworks */,
 				23CCA44C18F9294A00C4EEE8 /* Foundation.framework in Frameworks */,
+				230764E618F9C15E0023D708 /* Parse.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -141,9 +174,18 @@
 			path = Machine;
 			sourceTree = "<group>";
 		};
+		230764E418F9C15E0023D708 /* 3rdParty */ = {
+			isa = PBXGroup;
+			children = (
+				230764E518F9C15E0023D708 /* Parse.framework */,
+			);
+			path = 3rdParty;
+			sourceTree = "<group>";
+		};
 		23CCA43F18F9294A00C4EEE8 = {
 			isa = PBXGroup;
 			children = (
+				230764E418F9C15E0023D708 /* 3rdParty */,
 				23CCA45118F9294A00C4EEE8 /* AntiFraudeHackathon */,
 				23CCA47018F9294A00C4EEE8 /* AntiFraudeHackathonTests */,
 				23CCA44A18F9294A00C4EEE8 /* Frameworks */,
@@ -163,6 +205,15 @@
 		23CCA44A18F9294A00C4EEE8 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				230764F718F9C1C90023D708 /* SystemConfiguration.framework */,
+				230764F518F9C1B20023D708 /* StoreKit.framework */,
+				230764F318F9C1AB0023D708 /* Security.framework */,
+				230764F118F9C1A30023D708 /* QuartzCore.framework */,
+				230764EF18F9C19E0023D708 /* MobileCoreServices.framework */,
+				230764ED18F9C1980023D708 /* libz.dylib */,
+				230764EB18F9C1920023D708 /* CoreLocation.framework */,
+				230764E918F9C1850023D708 /* CFNetwork.framework */,
+				230764E718F9C17D0023D708 /* AudioToolbox.framework */,
 				ABE7F2ED18F99CFF001DCE83 /* MapKit.framework */,
 				23CCA44B18F9294A00C4EEE8 /* Foundation.framework */,
 				23CCA44D18F9294A00C4EEE8 /* CoreGraphics.framework */,
@@ -183,6 +234,8 @@
 				ABE7F2EF18F99D62001DCE83 /* Model */,
 				23CCA46318F9294A00C4EEE8 /* Images.xcassets */,
 				23CCA45218F9294A00C4EEE8 /* Supporting Files */,
+				230764F918F9C1EB0023D708 /* AFHParseChief.h */,
+				230764FA18F9C1EB0023D708 /* AFHParseChief.m */,
 			);
 			path = AntiFraudeHackathon;
 			sourceTree = "<group>";
@@ -358,6 +411,7 @@
 				ABE7F2F318F99D7C001DCE83 /* AFHDetailViewController.m in Sources */,
 				ABE7F2E918F97BBB001DCE83 /* AFHTableViewController.m in Sources */,
 				230764E218F9C0070023D708 /* AFHActivity.m in Sources */,
+				230764FB18F9C1EB0023D708 /* AFHParseChief.m in Sources */,
 				ABE7F2EC18F97C40001DCE83 /* AFHDataObject.m in Sources */,
 				23CCA45C18F9294A00C4EEE8 /* AFHAppDelegate.m in Sources */,
 				23CCA45818F9294A00C4EEE8 /* main.m in Sources */,
@@ -500,10 +554,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/3rdParty",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "AntiFraudeHackathon/AntiFraudeHackathon-Prefix.pch";
 				INFOPLIST_FILE = "AntiFraudeHackathon/AntiFraudeHackathon-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "6ABEF3BC-3157-4B64-9C7E-A01B2B3A0ABF";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -513,10 +572,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/3rdParty",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "AntiFraudeHackathon/AntiFraudeHackathon-Prefix.pch";
 				INFOPLIST_FILE = "AntiFraudeHackathon/AntiFraudeHackathon-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "6ABEF3BC-3157-4B64-9C7E-A01B2B3A0ABF";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
