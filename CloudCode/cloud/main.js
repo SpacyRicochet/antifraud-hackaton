@@ -1,4 +1,5 @@
-
+require('cloud/boris.js');
+require('cloud/pushevent.js');
 
 // Add an activity.
 Parse.Cloud.define("AddNewActivity", function(request, response) {
