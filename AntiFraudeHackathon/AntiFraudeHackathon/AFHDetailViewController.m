@@ -52,10 +52,10 @@
 {
     [super viewWillAppear:animated];
     
-    if (_dataObject.flaggedValue)
-    {
-        [_reportButton setTitle:NSLocalizedString(@"  Probleem gemeld  ", nil) forState:UIControlStateNormal];
-    }
+//    if (_dataObject.flaggedValue)
+//    {
+//        [_reportButton setTitle:NSLocalizedString(@"  Probleem gemeld  ", nil) forState:UIControlStateNormal];
+//    }
 }
 
 - (void)viewDidAppear:(BOOL)animated
