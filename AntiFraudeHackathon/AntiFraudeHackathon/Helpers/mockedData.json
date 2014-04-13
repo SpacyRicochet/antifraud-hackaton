@@ -1,6 +1,6 @@
 {
     "DigiD" :{
-        "image" : "",
+        "image" : "Creditcard",
         "informatie" : "U heeft vanaf een computer ingelogd op uw DigiD.",
         "maatregel1" : "",
         "url1" : "",
@@ -16,7 +16,7 @@
         "long3" : ""
     },
     "Ingeschreven Den Haag" :{
-                "image" : "",
+        "image" : "Home",
         "informatie" : "U bent ingeschreven als inwoner van Den Haag door de Gemeente Den Haag.",
         "maatregel1" : "",
         "url1" : "",
@@ -32,7 +32,7 @@
         "long3" : ""
     },
     "Uitgeschreven Delft" :{
-                "image" : "",
+        "image" : "Home",
         "informatie" : "U bent uitgeschreven als inwoner van Delft door de Gemeente Den Haag.",
         "maatregel1" : "",
         "url1" : "",
@@ -48,7 +48,7 @@
         "long3" : ""
     },
     "Aangifte inbraak" :{
-                "image" : "",
+        "image" : "Law",
         "informatie" : "U heeft aangifte gedaan van inbraak in uw woning bij de Politie in Den Haag.",
         "maatregel1" : "",
         "url1" : "",
@@ -64,7 +64,7 @@
         "long3" : ""
     },
     "Paspoort vermist" :{
-                "image" : "",
+        "image" : "Creditcard",
         "informatie" : "Uw paspoort is als vermist opgegeven bij de Politie in Groningen.",
         "maatregel1" : "Neem contact op met het politiebureau waar uw paspoort als vermist is opgegeven: 0900-8844.",
         "url1" : "http://www.politie.nl/bureaus/01/district-groningen/politie-groningen-centrum.html",
@@ -80,7 +80,7 @@
         "long3" : "4.316667"
     },
     "Ingeschreven Groningen" :{
-                "image" : "",
+        "image" : "Home",
         "informatie" : "Uw bent ingeschreven als inwoner van Groningen door de Gemeente Groningen.",
         "maatregel1" : "Neem contact op met de Gemeente waar u bent in geschreven: 050-3677000",
         "url1" : "http://gemeente.groningen.nl/contact",
@@ -96,7 +96,7 @@
         "long3" : "4.316667"
     },
     "Bedrijf gestart" :{
-                "image" : "",
+        "image" : "Business",
         "informatie" : "Uw bent het bedrijf ‘Frauduleus B.V.’ gestart bij de Kamer van Koophandel in Groningen.",
         "maatregel1" : "Neem contact op met de Kamer van Koophandel in Groningen: 088-5851585",
         "url1" : "http://www.kvk.nl/contact/kantoren/kantoor-groningen/",
@@ -112,7 +112,7 @@
         "long3" : ""
     },
     "Overleden" :{
-                "image" : "",
+        "image" : "skull",
         "informatie" : "U bent opgegeven als overleden door het Universitair Medisch Centrum Groningen. Gecondoleerd.",
         "maatregel1" : "Bent u niet overleden? Neem contact op met het Universitair Medisch Centrum Groningen: 050-3616161",
         "url1" : "https://www.umcg.nl/NL/Zorg/Pages/Default.aspx",

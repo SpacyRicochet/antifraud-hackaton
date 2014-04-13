@@ -7,6 +7,16 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <CoreLocation/CoreLocation.h>
+
+@interface NSDictionary (AFH)
+
+- (CLLocation *)locationForStep:(NSNumber *)step;
+- (NSURL *)urlForStep:(NSNumber *)step;
+- (NSString *)information;
+- (UIImage *)image;
+
+@end
 
 @interface AFHAditionalDataHelper : NSObject
 

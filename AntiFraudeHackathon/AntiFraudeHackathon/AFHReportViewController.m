@@ -51,11 +51,16 @@
 {
     AFHStepOneViewController *vc1 = [AFHStepOneViewController new];
     AFHStepTwoViewController *vc2 = [AFHStepTwoViewController new];
-    vc2.title = @"2. Rapporteer";
     AFHStepTwoViewController *vc3 = [AFHStepTwoViewController new];
-    vc3.title = @"3. Extra";
-    
+    vc3.isStepThree = YES;
+
     _stepsViewControllers = @[vc1, vc2, vc3];
+    
+    for (UIViewController *vc in _stepsViewControllers) {
+        [self addChildViewController:vc];
+        ((AFHStepOneViewController *)vc).dataObject = self.dataObject;
+    }
+    
     _pageControl.numberOfPages = _stepsViewControllers.count;
 }
 

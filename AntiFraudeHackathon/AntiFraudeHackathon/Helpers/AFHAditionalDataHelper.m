@@ -8,6 +8,42 @@
 
 #import "AFHAditionalDataHelper.h"
 
+@implementation NSDictionary (AFH)
+
+- (CLLocation *)locationForStep:(NSNumber *)step
+{
+    NSString *keyLat = [@"lat" stringByAppendingString:step.stringValue];
+    NSString *keyLong = [@"long" stringByAppendingString:step.stringValue];
+    NSString *stringLat = [self objectForKey:keyLat];
+    NSString *stringLong = [self objectForKey:keyLong];
+    
+    CLLocation *result = [[CLLocation alloc] initWithLatitude:stringLat.floatValue longitude:stringLong.floatValue];
+    return result;
+}
+
+- (NSURL *)urlForStep:(NSNumber *)step
+{
+    NSString *key = [@"url" stringByAppendingString:step.stringValue];
+    NSString *urlString = [self objectForKey:key];
+    NSURL *result = [NSURL URLWithString:urlString];
+    return result;
+}
+
+- (NSString *)information
+{
+    NSString *result = [self objectForKey:@"informatie"];
+    return result;
+}
+
+- (UIImage *)image
+{
+    NSString *imageName = [self objectForKey:@"image"];
+    UIImage *result = [UIImage imageNamed:imageName];
+    return result;
+}
+
+@end
+
 @implementation AFHAditionalDataHelper
 
 static NSDictionary *mainDict;
