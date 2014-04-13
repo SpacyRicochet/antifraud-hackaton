@@ -4,18 +4,18 @@
 #import "_AFHActivity.h"
 
 const struct AFHActivityAttributes AFHActivityAttributes = {
+	.accessor = @"accessor",
 	.city = @"city",
+	.database = @"database",
 	.date = @"date",
 	.event = @"event",
 	.flagged = @"flagged",
 	.identifier = @"identifier",
-	.institution = @"institution",
 	.latitude = @"latitude",
 	.longitude = @"longitude",
 	.placeholder0 = @"placeholder0",
 	.placeholder1 = @"placeholder1",
 	.placeholder2 = @"placeholder2",
-	.source = @"source",
 };
 
 const struct AFHActivityRelationships AFHActivityRelationships = {
@@ -72,7 +72,21 @@ const struct AFHActivityFetchedProperties AFHActivityFetchedProperties = {
 
 
 
+@dynamic accessor;
+
+
+
+
+
+
 @dynamic city;
+
+
+
+
+
+
+@dynamic database;
 
 
 
@@ -120,13 +134,6 @@ const struct AFHActivityFetchedProperties AFHActivityFetchedProperties = {
 
 
 @dynamic identifier;
-
-
-
-
-
-
-@dynamic institution;
 
 
 
@@ -200,13 +207,6 @@ const struct AFHActivityFetchedProperties AFHActivityFetchedProperties = {
 
 
 @dynamic placeholder2;
-
-
-
-
-
-
-@dynamic source;
 
 
 

@@ -14,7 +14,7 @@
 @interface AFHAppDelegate ()
 
 @property (nonatomic, strong) AFHParseChief *parseChief;
-@property (nonatomic, strong) NSManagedObjectContext *managedObjectContext;
+@property (nonatomic, strong) AFHCoreDataChief *coreDataChief;
 
 @end
 
@@ -25,11 +25,16 @@
     [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
     // Override point for customization after application launch.
     
-    // Setup Parse
+    // Setup chiefs
     self.parseChief = [AFHParseChief shared];
-    self.managedObjectContext = [AFHCoreDataChief shared].managedObjectContext;
+    self.coreDataChief = [AFHCoreDataChief shared];
     
-    [self.parseChief getActivitiesForManagedObjectContext:self.managedObjectContext];
+#ifdef DEBUG_RESET_DATABASE
+    [self.coreDataChief reset];
+    [self.parseChief reset];
+#endif
+    
+    [self.parseChief getActivitiesForManagedObjectContext:self.coreDataChief.managedObjectContext];
     
     return YES;
 }
@@ -70,7 +75,7 @@
 
 - (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo
 {
-    [self.parseChief didReceiveRemoteNotification:userInfo managedObjectContext:self.managedObjectContext];
+    [self.parseChief didReceiveRemoteNotification:userInfo managedObjectContext:self.coreDataChief.managedObjectContext];
 }
 
 @end

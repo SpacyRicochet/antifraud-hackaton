@@ -13,4 +13,8 @@
 
 + (AFHCoreDataChief *)shared;
 
+#ifdef DEBUG_RESET_DATABASE
+- (void)reset;
+#endif
+
 @end

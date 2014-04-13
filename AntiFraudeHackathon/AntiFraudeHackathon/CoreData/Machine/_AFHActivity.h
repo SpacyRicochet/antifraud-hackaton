@@ -5,18 +5,18 @@
 
 
 extern const struct AFHActivityAttributes {
+	__unsafe_unretained NSString *accessor;
 	__unsafe_unretained NSString *city;
+	__unsafe_unretained NSString *database;
 	__unsafe_unretained NSString *date;
 	__unsafe_unretained NSString *event;
 	__unsafe_unretained NSString *flagged;
 	__unsafe_unretained NSString *identifier;
-	__unsafe_unretained NSString *institution;
 	__unsafe_unretained NSString *latitude;
 	__unsafe_unretained NSString *longitude;
 	__unsafe_unretained NSString *placeholder0;
 	__unsafe_unretained NSString *placeholder1;
 	__unsafe_unretained NSString *placeholder2;
-	__unsafe_unretained NSString *source;
 } AFHActivityAttributes;
 
 extern const struct AFHActivityRelationships {
@@ -34,10 +34,10 @@ extern const struct AFHActivityFetchedProperties {
 
 
 
-@class NSObject;
-@class NSObject;
-@class NSObject;
 
+@class NSObject;
+@class NSObject;
+@class NSObject;
 
 @interface AFHActivityID : NSManagedObjectID {}
 @end
@@ -52,11 +52,31 @@ extern const struct AFHActivityFetchedProperties {
 
 
 
+@property (nonatomic, strong) NSString* accessor;
+
+
+
+//- (BOOL)validateAccessor:(id*)value_ error:(NSError**)error_;
+
+
+
+
+
 @property (nonatomic, strong) NSString* city;
 
 
 
 //- (BOOL)validateCity:(id*)value_ error:(NSError**)error_;
+
+
+
+
+
+@property (nonatomic, strong) NSString* database;
+
+
+
+//- (BOOL)validateDatabase:(id*)value_ error:(NSError**)error_;
 
 
 
@@ -101,16 +121,6 @@ extern const struct AFHActivityFetchedProperties {
 
 
 //- (BOOL)validateIdentifier:(id*)value_ error:(NSError**)error_;
-
-
-
-
-
-@property (nonatomic, strong) NSString* institution;
-
-
-
-//- (BOOL)validateInstitution:(id*)value_ error:(NSError**)error_;
 
 
 
@@ -174,16 +184,6 @@ extern const struct AFHActivityFetchedProperties {
 
 
 
-@property (nonatomic, strong) NSString* source;
-
-
-
-//- (BOOL)validateSource:(id*)value_ error:(NSError**)error_;
-
-
-
-
-
 
 @end
 
@@ -194,8 +194,20 @@ extern const struct AFHActivityFetchedProperties {
 @interface _AFHActivity (CoreDataGeneratedPrimitiveAccessors)
 
 
+- (NSString*)primitiveAccessor;
+- (void)setPrimitiveAccessor:(NSString*)value;
+
+
+
+
 - (NSString*)primitiveCity;
 - (void)setPrimitiveCity:(NSString*)value;
+
+
+
+
+- (NSString*)primitiveDatabase;
+- (void)setPrimitiveDatabase:(NSString*)value;
 
 
 
@@ -223,12 +235,6 @@ extern const struct AFHActivityFetchedProperties {
 
 - (NSString*)primitiveIdentifier;
 - (void)setPrimitiveIdentifier:(NSString*)value;
-
-
-
-
-- (NSString*)primitiveInstitution;
-- (void)setPrimitiveInstitution:(NSString*)value;
 
 
 
@@ -265,12 +271,6 @@ extern const struct AFHActivityFetchedProperties {
 
 - (id)primitivePlaceholder2;
 - (void)setPrimitivePlaceholder2:(id)value;
-
-
-
-
-- (NSString*)primitiveSource;
-- (void)setPrimitiveSource:(NSString*)value;
 
 
 

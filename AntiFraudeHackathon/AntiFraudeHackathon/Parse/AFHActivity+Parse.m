@@ -12,7 +12,7 @@
 
 @implementation AFHActivity (Parse)
 
-+ (id)newWithParseObject:(PFObject *)object managedObjectContext:(NSManagedObjectContext *)context
++ (id)createWithParseObject:(PFObject *)object managedObjectContext:(NSManagedObjectContext *)context
 {
     NWLogWarnIfNot(context, @"No managed object context to create object in.");
     
@@ -27,8 +27,8 @@
     result.city             = object[ParseActivityCity];
     result.event            = object[ParseActivityEvent];
     result.flagged          = object[ParseActivityFlagged];
-    result.institution      = object[ParseActivityIncludeAccessor][ParseOrganizationName];
-    result.source           = object[ParseActivityIncludeSource][ParseSourceDatabase];
+    result.accessor         = object[ParseActivityAccessor];
+    result.database         = object[ParseActivitySource];
     
     PFGeoPoint *geoPoint    = object[ParseActivityLocation];
     result.latitudeValue    = geoPoint.latitude;

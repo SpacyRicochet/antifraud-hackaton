@@ -22,9 +22,6 @@
 
         result = [[AFHCoreDataChief alloc] initWithModelURL:modelURL storeURL:storeURL];
         
-#ifdef DEBUG_RESET_DATABASE
-        [result resetDatabase];
-#endif
     });
     return result;
 }
@@ -39,7 +36,7 @@
     }
 }
 
-- (void)resetDatabase
+- (void)reset
 {
     NSArray *fetchedObjects = [NWCoreData fetchObjectsFromContext:self.managedObjectContext entityName:[AFHActivity entityName]];
     for (__unsafe_unretained NSManagedObject *toBeDeleted in fetchedObjects) {

@@ -10,8 +10,8 @@
 
 extern NSString * const ParseDefaultsLastGetDate;
 
-extern NSString * const ParseOrganizationClass;
-extern NSString * const ParseOrganizationName;
+//extern NSString * const ParseOrganizationClass;
+//extern NSString * const ParseOrganizationName;
 
 extern NSString * const ParceSourceClass;
 extern NSString * const ParseSourceDatabase;
@@ -23,12 +23,14 @@ extern NSString * const ParseActivityEvent;
 extern NSString * const ParseActivityFlagged;
 extern NSString * const ParseActivityIdentifier;
 extern NSString * const ParseActivityLocation;
+extern NSString * const ParseActivityAccessor;
+extern NSString * const ParseActivitySource;
 //extern NSString * const ParseActivityPlaceholder0;
 //extern NSString * const ParseActivityPlaceholder1;
 //extern NSString * const ParseActivityPlaceholder2;
 
-extern NSString * const ParseActivityIncludeAccessor;
-extern NSString * const ParseActivityIncludeSource;
+//extern NSString * const ParseActivityIncludeAccessor;
+//extern NSString * const ParseActivityIncludeSource;
 
 extern NSString * const ParseNotificationAlert;
 

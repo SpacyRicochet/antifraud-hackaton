@@ -34,6 +34,13 @@
     [[UIApplication sharedApplication] registerForRemoteNotificationTypes:notificationTypes];
 }
 
+- (void)reset
+{
+    [[NSUserDefaults standardUserDefaults] removeObjectForKey:ParseDefaultsLastGetDate];
+}
+
+#pragma mark - Push notifications
+
 - (void)didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken
 {
     // Store the deviceToken in the current installation and save it to Parse.
@@ -50,7 +57,7 @@
     NWLog(@"Received notification with payload:\n%@", userInfo);
 }
 
-#pragma mark - Fetching activities
+#pragma mark - Get Activities
 
 - (void)getActivitiesForManagedObjectContext:(NSManagedObjectContext *)context
 {
@@ -65,9 +72,6 @@
     PFQuery *query = [PFQuery queryWithClassName:ParseActivityClass predicate:datePredicate];
     [query orderByDescending:ParseActivityCreation];
     
-    [query includeKey:ParseActivityIncludeAccessor];
-    [query includeKey:ParseActivityIncludeSource];
-    
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
         if (error) {
             NWError(error);
@@ -77,16 +81,14 @@
         for (__unsafe_unretained PFObject *object in objects) {
             NWLog(@"Found object: %@", object);
             
-            AFHActivity *newActivity = [AFHActivity newWithParseObject:object managedObjectContext:context];
-            
-            NWLog(@"testing nested classes: %@ %@", newActivity.source, newActivity.institution);
+            [AFHActivity createWithParseObject:object managedObjectContext:context];
         }
         
         [self saveNowAsLastGetDate];
     }];
 }
 
-#pragma mark - Last fetch date
+#pragma mark - Last get date
 
 - (NSDate *)dateSinceLastGet
 {

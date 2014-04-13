@@ -12,6 +12,6 @@
 
 @interface AFHActivity (Parse)
 
-+ (id)newWithParseObject:(PFObject *)object managedObjectContext:(NSManagedObjectContext *)context;
++ (id)createWithParseObject:(PFObject *)object managedObjectContext:(NSManagedObjectContext *)context;
 
 @end

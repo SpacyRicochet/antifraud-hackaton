@@ -14,8 +14,12 @@
 
 - (void)didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken;
 - (void)didReceiveRemoteNotification:(NSDictionary *)userInfo managedObjectContext:(NSManagedObjectContext *)context;
+
 - (void)getActivitiesForManagedObjectContext:(NSManagedObjectContext *)context;
 - (void)getActivitiesSinceDate:(NSDate *)date managedObjectContext:(NSManagedObjectContext *)context;
 
+#ifdef DEBUG_RESET_DATABASE
+- (void)reset;
+#endif
 
 @end
