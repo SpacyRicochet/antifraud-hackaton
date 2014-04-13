@@ -1,53 +1,56 @@
 
 // Add an activity.
 Parse.Cloud.define("AddNewActivity", function(request, response) {
-
+  
   var activities = [{
       description:"Subside aanvraag",
-      accessor: 'vYbJ2wR1Vl',
+      accessorName: 'Gemeente Den Haag',
       flaggedByUser: false,
-      location: "M1hMxgFDmD",
-      src: 'FFzFpAjynb'
+      city: 'Den Haag',
+      srcDatabase: 'GBA',
+      location: new Parse.GeoPoint(52.069694,4.300804)
     },{
       description:"Adres verandering",
-      accessor: 'vYbJ2wR1Vl',
+      accessorName: 'Gemeente Den Haag',
       flaggedByUser: false,
-      location: 'M1hMxgFDmD',
-      src: 'W9TNikJ5il'
+      city: 'Groningen',
+      srcDatabase: 'GBA',
+      location: new Parse.GeoPoint(52.069694,4.300804)
     },{
       description:"Rekening aanvraag",
-      accessor: 'vYbJ2wR1Vl',
-      flaggedByUser: false,
-      location: 'M1hMxgFDmD',
-      src: 'W9TNikJ5il'
+      accessorName: 'Gemeente Den Haag',
+      flaggedByUser:false,
+      city: 'Groningen',
+      srcDatabase: 'GBA',
+      location: new Parse.GeoPoint(52.069694,4.300804)
     },{
       description:"ID-bewijs opnieuw aangevraagd",
-      accessor: 'yLb0IwLEk2',
+      accessorName: 'Gemeente Groningen',
       flaggedByUser: false,
-      location: '9Ie05ILjzU',
-      src: 'W9TNikJ5il'
+      city: 'Groningen',
+      srcDatabase: 'GBA',
+      location: new Parse.GeoPoint(53.221606,6.563988)
   }];
 
   var Activity = Parse.Object.extend("Activity");
   var act = new Activity();
+  var number = 0;
+  if(request.params.number !== undefined){
+    number = request.params.number;
+  }
 
-  var number = Number(request.params.number) % activities.length;
-
-  act.save({
-      description:"Adres verandering",
-      accessor: 'vYbJ2wR1Vl',
-      flaggedByUser: false,
-      location: 'M1hMxgFDmD',
-      src: 'W9TNikJ5il'
-    }, {
+  act.save(activities[number],{
     success: function(act) {
       response.success("Created new activity.");
     },
     error: function(act, error) {
-      response.error("Failed to create new activity.");
+      response.error(error);
     }
   });
 });
+
+
+
 
 
 
