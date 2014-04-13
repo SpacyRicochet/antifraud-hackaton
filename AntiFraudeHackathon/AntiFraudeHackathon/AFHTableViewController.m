@@ -37,8 +37,6 @@
     NSFetchedResultsController *fetchedResultsController = [[NSFetchedResultsController alloc] initWithFetchRequest:request managedObjectContext:[AFHCoreDataChief shared].managedObjectContext sectionNameKeyPath:nil cacheName:nil];
     self.fetchedResultsController = fetchedResultsController;
     
-    self.tableView.backgroundColor = [UIColor darkGrayColor];
-    
     [self setupDataSource];
 }
 
