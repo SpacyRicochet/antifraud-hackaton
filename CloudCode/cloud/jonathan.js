@@ -68,7 +68,7 @@ Parse.Cloud.define("AddNewActivity", function(request, response) {
       date: new Date(2014, 4, 10, 15, 00)
     },{
       description:"Overleden",
-      accessorName: 'Universitair Medisch Centrum Groningen',
+      accessorName: "Universitair Medisch Centrum Groningen",
       flaggedByUser: false,
       city: 'Groningen',
       srcDatabase: 'GBA,EPD',
