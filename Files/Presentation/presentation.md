@@ -50,6 +50,15 @@ Het wapen van de burger tegen identiteitsfraude
 
 ---
 
+1. Toepasbaarheid
+2. Effectiviteit
+3. Inventiviteit
+4. Originaliteit
+
+^ 1. haalbaar + privacy -2. effectief? voorkomt? -3. nieuw? -4. origneel? verassend?
+
+---
+
 ## Tot slot...
 
 ---
