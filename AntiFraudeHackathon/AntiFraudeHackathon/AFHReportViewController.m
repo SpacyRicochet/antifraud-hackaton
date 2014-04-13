@@ -8,10 +8,13 @@
 
 #import "AFHReportViewController.h"
 #import "AFHDataObject.h"
+#import "AFHStepOneViewController.h"
+#import "AFHStepTwoViewController.h"
+#import "AFHStepThreeViewController.h"
 
 @interface AFHReportViewController () <UIScrollViewDelegate>
 {
-    NSMutableArray *_pages;
+    NSArray *_stepsViewControllers;
     __weak IBOutlet UIScrollView *_scrollView;
     __weak IBOutlet UIPageControl *_pageControl;
 }
@@ -32,33 +35,38 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    int i = 0;
+    for (UIViewController *vc in _stepsViewControllers) {
+        CGRect frame = vc.view.frame;
+        frame.origin.x += 320 * i;
+        vc.view.frame = frame;
+        i++;
+    }
+    self.title = ((UIViewController *)_stepsViewControllers[0]).title;
+}
+
 - (void)setupPages
 {
-    _pages = @[].mutableCopy;
+    AFHStepOneViewController *vc1 = [AFHStepOneViewController new];
+    AFHStepTwoViewController *vc2 = [AFHStepTwoViewController new];
+    AFHStepThreeViewController *vc3 = [AFHStepThreeViewController new];
     
-    for (NSUInteger i = 0; i < 5; i++)
-    {
-        UIView *view = [UIView new];
-        float hue = (1.0  / 5.0) * (float)i;
-        view.backgroundColor = [UIColor colorWithHue:hue saturation:1 brightness:1 alpha:1];
-        view.frame = self.view.bounds;
-        view.frame = CGRectMake(i * 320, 0, 320, self.view.bounds.size.height - 64);
-        [_pages addObject:view];
-    }
+    _stepsViewControllers = @[vc1, vc2, vc3];
+    _pageControl.numberOfPages = _stepsViewControllers.count;
 }
 
 - (void)setupUI
 {
-    _scrollView.contentSize = CGSizeMake(_pages.count * 320, self.view.bounds.size.height - 64);
+    _scrollView.contentSize = CGSizeMake(_stepsViewControllers.count * 320, self.view.bounds.size.height - 64);
     _scrollView.delegate = self;
     
-    for (UIView *view in _pages)
+    for (UIViewController *vc in _stepsViewControllers)
     {
-        [_scrollView addSubview:view];
+        [_scrollView addSubview:vc.view];
     }
-    [self.view addSubview:_scrollView];
-    
-    _pageControl.layer.zPosition = 10;
 }
 
 #pragma mark - scrollview delegate
@@ -67,7 +75,12 @@
     CGFloat pageWidth = _scrollView.frame.size.width; // you need to have a **iVar** with getter for scrollView
     float fractionalPage = _scrollView.contentOffset.x / pageWidth;
     NSInteger page = lround(fractionalPage);
-    _pageControl.currentPage = page; // you need to have a **iVar** with getter for pageControl
+    if(page != _pageControl.currentPage){
+        UIViewController *pageVc = _stepsViewControllers[page];
+        NSString *title = pageVc.title;
+        self.title = title;
+        _pageControl.currentPage = page; // you need to have a **iVar** with getter for pageControl
+    }
 }
 
 @end
