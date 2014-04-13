@@ -70,6 +70,7 @@
 		DEE394A218FA8B9400A1545F /* AFHStepOneViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DEE394A118FA8B9400A1545F /* AFHStepOneViewController.xib */; };
 		DEE394A818FA9DFA00A1545F /* AFHStepTwoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DEE394A718FA9DFA00A1545F /* AFHStepTwoViewController.xib */; };
 		DEE394AA18FAA79000A1545F /* mockedData.json in Resources */ = {isa = PBXBuildFile; fileRef = DEE394A918FAA79000A1545F /* mockedData.json */; };
+		DEE394AD18FAC57300A1545F /* UIImage+Tint.m in Sources */ = {isa = PBXBuildFile; fileRef = DEE394AC18FAC57300A1545F /* UIImage+Tint.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -157,6 +158,8 @@
 		DEE394A118FA8B9400A1545F /* AFHStepOneViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AFHStepOneViewController.xib; sourceTree = "<group>"; };
 		DEE394A718FA9DFA00A1545F /* AFHStepTwoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AFHStepTwoViewController.xib; sourceTree = "<group>"; };
 		DEE394A918FAA79000A1545F /* mockedData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = mockedData.json; sourceTree = "<group>"; };
+		DEE394AB18FAC57300A1545F /* UIImage+Tint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Tint.h"; sourceTree = "<group>"; };
+		DEE394AC18FAC57300A1545F /* UIImage+Tint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Tint.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -387,6 +390,8 @@
 		DEE3948E18FA7B8700A1545F /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				DEE394AB18FAC57300A1545F /* UIImage+Tint.h */,
+				DEE394AC18FAC57300A1545F /* UIImage+Tint.m */,
 				DEE3948F18FA7BA200A1545F /* AFHTypes.h */,
 				DEE3949218FA7D7C00A1545F /* AFHAditionalDataHelper.h */,
 				DEE3949318FA7D7C00A1545F /* AFHAditionalDataHelper.m */,
@@ -525,6 +530,7 @@
 				230764E218F9C0070023D708 /* AFHActivity.m in Sources */,
 				ABE7F2EC18F97C40001DCE83 /* AFHDataObject.m in Sources */,
 				2332C37318FAB17200B5ED2E /* AFHActivityTableViewCell.m in Sources */,
+				DEE394AD18FAC57300A1545F /* UIImage+Tint.m in Sources */,
 				23CCA45C18F9294A00C4EEE8 /* AFHAppDelegate.m in Sources */,
 				ABE7F2FC18F9C63D001DCE83 /* AFHReportViewController.m in Sources */,
 				23CCA45818F9294A00C4EEE8 /* main.m in Sources */,
