@@ -4,7 +4,7 @@ Parse.Cloud.afterSave('Activity', function(request) {
     channels: ["Activities"],
     expiration_time: new Date(2014, 4, 17),
     data: {
-      alert: request.object.id
+      alert: "Uw identiteit is gebruikt voor '" + request.object.get("description") + "'. Klopt dit?"
     }
   }, {
     success: function() {

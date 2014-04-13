@@ -8,11 +8,12 @@
       "scale" : "2x"
     },
     {
-      "orientation" : "portrait",
+      "extent" : "full-screen",
       "idiom" : "iphone",
       "subtype" : "retina4",
-      "extent" : "full-screen",
+      "filename" : "iOS Simulator Screen shot 12 Apr 2014 17.00.00.png",
       "minimum-system-version" : "7.0",
+      "orientation" : "portrait",
       "scale" : "2x"
     }
   ],
