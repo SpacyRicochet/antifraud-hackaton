@@ -55,6 +55,7 @@
 - (void)didReceiveRemoteNotification:(NSDictionary *)userInfo managedObjectContext:(NSManagedObjectContext *)context {
     
     NWLog(@"Received notification with payload:\n%@", userInfo);
+    [self getActivitiesForManagedObjectContext:context];
 }
 
 #pragma mark - Get Activities

@@ -43,6 +43,7 @@
 		2307651118F9F79C0023D708 /* AFHActivity+Parse.m in Sources */ = {isa = PBXBuildFile; fileRef = 2307651018F9F79C0023D708 /* AFHActivity+Parse.m */; };
 		2307651418F9F8A50023D708 /* AFHParseConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 2307651318F9F8A50023D708 /* AFHParseConstants.m */; };
 		2307651718FA09FA0023D708 /* AFHDebug.m in Sources */ = {isa = PBXBuildFile; fileRef = 2307651618FA09FA0023D708 /* AFHDebug.m */; };
+		2332C37318FAB17200B5ED2E /* AFHActivityTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2332C37218FAB17200B5ED2E /* AFHActivityTableViewCell.m */; };
 		23CCA44C18F9294A00C4EEE8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23CCA44B18F9294A00C4EEE8 /* Foundation.framework */; };
 		23CCA44E18F9294A00C4EEE8 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23CCA44D18F9294A00C4EEE8 /* CoreGraphics.framework */; };
 		23CCA45018F9294A00C4EEE8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23CCA44F18F9294A00C4EEE8 /* UIKit.framework */; };
@@ -114,6 +115,8 @@
 		2307651318F9F8A50023D708 /* AFHParseConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHParseConstants.m; sourceTree = "<group>"; };
 		2307651518FA09FA0023D708 /* AFHDebug.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHDebug.h; sourceTree = "<group>"; };
 		2307651618FA09FA0023D708 /* AFHDebug.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHDebug.m; sourceTree = "<group>"; };
+		2332C37118FAB17200B5ED2E /* AFHActivityTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHActivityTableViewCell.h; sourceTree = "<group>"; };
+		2332C37218FAB17200B5ED2E /* AFHActivityTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHActivityTableViewCell.m; sourceTree = "<group>"; };
 		23CCA44818F9294A00C4EEE8 /* AntiFraudeHackathon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AntiFraudeHackathon.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		23CCA44B18F9294A00C4EEE8 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		23CCA44D18F9294A00C4EEE8 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -365,6 +368,8 @@
 				23CCA46118F9294A00C4EEE8 /* AFHViewController.m */,
 				ABE7F2E718F97BBB001DCE83 /* AFHTableViewController.h */,
 				ABE7F2E818F97BBB001DCE83 /* AFHTableViewController.m */,
+				2332C37118FAB17200B5ED2E /* AFHActivityTableViewCell.h */,
+				2332C37218FAB17200B5ED2E /* AFHActivityTableViewCell.m */,
 				ABE7F2F118F99D7C001DCE83 /* AFHDetailViewController.h */,
 				ABE7F2F218F99D7C001DCE83 /* AFHDetailViewController.m */,
 				ABE7F2FA18F9C63D001DCE83 /* AFHReportViewController.h */,
@@ -519,6 +524,7 @@
 				ABE7F2E918F97BBB001DCE83 /* AFHTableViewController.m in Sources */,
 				230764E218F9C0070023D708 /* AFHActivity.m in Sources */,
 				ABE7F2EC18F97C40001DCE83 /* AFHDataObject.m in Sources */,
+				2332C37318FAB17200B5ED2E /* AFHActivityTableViewCell.m in Sources */,
 				23CCA45C18F9294A00C4EEE8 /* AFHAppDelegate.m in Sources */,
 				ABE7F2FC18F9C63D001DCE83 /* AFHReportViewController.m in Sources */,
 				23CCA45818F9294A00C4EEE8 /* main.m in Sources */,
