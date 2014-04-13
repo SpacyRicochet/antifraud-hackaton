@@ -13,6 +13,7 @@
 #import "AFHActivity.h"
 #import "AFHCoreDataChief.h"
 #import "AFHActivityTableViewCell.h"
+#import "AFHAditionalDataHelper.h"
 
 @interface AFHTableViewController () <NWComposedTableViewDataSourceDelegate>
 
@@ -92,105 +93,14 @@
     
     NSString *dateString = [self.dateFormatter stringFromDate:activity.date];
     cell.detailTextLabel.text = [NSString stringWithFormat:@"%@, %@", activity.accessor, dateString];
-    
-    int i = indexPath.row % 4;
-    switch (i) {
-        case 0:{
-            [cell.imageView setImage:[UIImage imageNamed:@"Creditcard"]];
-        }   break;
-        case 1:{
-            [cell.imageView setImage:[UIImage imageNamed:@"doctor2"]];
-        }   break;
-        case 2:{
-            [cell.imageView setImage:[UIImage imageNamed:@"Home"]];
-        }   break;
-        case 3:{
-            [cell.imageView setImage:[UIImage imageNamed:@"Law"]];
-        }   break;
-        default:
-            break;
-    }
+    NSDictionary *dict = [AFHAditionalDataHelper dictForKey:activity.event];
+    [cell.imageView setImage:[dict image]];
 }
 
 - (Class)tableViewDataSource:(NWComposedTableViewDataSource *)dataSource cellClassForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     return [AFHActivityTableViewCell class];
 }
-
-//#pragma mark - Table view data source
-//
-//- (void)setupData
-//{
-//    NSArray *descriptions = @[@"Ingeschreven op adres",
-//                              @"Subsidie aangevraagd",
-//                              @"Rekening opgeheven",
-//                              @"Bedrijf opgericht",
-//                              @"Krediet aangevraagd",
-//                              @"ID bewijs opgegeven als gestolen",
-//                              @"ID bewijs aangevraagd",
-//                              @"Hypotheek verstrekt",
-//                              @"Aanmerking op strafblad",
-//                              @"Ingelogd op de pagina van DigiD"];
-//    NSArray *accessors = @[@"Gemeente Delft",
-//                           @"Stimuleringsfonds",
-//                           @"Bank",
-//                           @"Kamer van Koophandel",
-//                           @"Bank",
-//                           @"Gemeente Delft",
-//                           @"Gemeente Delft",
-//                           @"Bank",
-//                           @"Rechtbank",
-//                           @"Overheid"];
-//    
-//    self.dataObjects = @[].mutableCopy;
-//    for (int i = 0; i < 10; i++)
-//    {
-//        AFHDataObject *dataObject = [AFHDataObject new];
-//        dataObject.description = descriptions[i];
-//        dataObject.accessor = accessors[i];
-//        dataObject.timeStamp = [NSDate new];
-//        [self.dataObjects addObject:dataObject];
-//    }
-//}
-//
-//- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
-//{
-//    return 1;
-//}
-//
-//- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
-//{
-//    return self.dataObjects.count;
-//}
-//
-//- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
-//{
-//    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"dataCell" forIndexPath:indexPath];
-//    AFHDataObject *dataObject = [self.dataObjects objectAtIndex:indexPath.row];
-//    cell.textLabel.text = dataObject.description;
-//    NSDateFormatter *dateFormatter = [NSDateFormatter new];
-//    [dateFormatter setTimeStyle:NSDateFormatterMediumStyle];
-//    cell.detailTextLabel.text = [dateFormatter stringFromDate:dataObject.timeStamp];
-//    
-//    int i = indexPath.row % 4;
-//    
-//    switch (i) {
-//        case 0:{
-//            [cell.imageView setImage:[UIImage imageNamed:@"Creditcard"]];
-//        }   break;
-//        case 1:{
-//            [cell.imageView setImage:[UIImage imageNamed:@"doctor2"]];
-//        }   break;
-//        case 2:{
-//            [cell.imageView setImage:[UIImage imageNamed:@"Home"]];
-//        }   break;
-//        case 3:{
-//            [cell.imageView setImage:[UIImage imageNamed:@"Law"]];
-//        }   break;
-//    }
-//    
-//    return cell;
-//}
 
 #pragma mark - UITableViewDelegate
 

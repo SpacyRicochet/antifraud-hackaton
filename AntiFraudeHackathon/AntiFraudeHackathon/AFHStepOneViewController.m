@@ -7,12 +7,16 @@
 //
 
 #import "AFHStepOneViewController.h"
+#import "AFHAditionalDataHelper.h"
 
 @interface AFHStepOneViewController ()
 
 @end
 
 @implementation AFHStepOneViewController
+{
+    NSDictionary *_dict;
+}
 
 - (void)viewDidLoad
 {
@@ -20,7 +24,28 @@
     [_verstuurMeldingBtn addTarget:self action:@selector(verstuurButtonPressed:) forControlEvents:UIControlEventTouchUpInside];
     _verstuurMeldingBtn.layer.cornerRadius = 5;
     _websiteBtn.layer.cornerRadius = 5;
+    [_websiteBtn addTarget:self action:@selector(websiteBtnPressed:) forControlEvents:UIControlEventTouchUpInside];
     self.title = @"1. Controleer";
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    _dict = [AFHAditionalDataHelper dictForKey:self.dataObject.event];
+    _textField.text = [_dict textForStep:@1];
+}
+
+- (void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    MKPointAnnotation *annotation = [MKPointAnnotation new];
+    
+    annotation.title = _dataObject.accessor;
+    annotation.coordinate = [_dict locationForStep:@1];
+    
+    [_mapView addAnnotation:annotation];
+    [_mapView showAnnotations:@[annotation] animated:YES];
+    [_mapView selectAnnotation:annotation animated:YES];
 }
 
 - (void)didReceiveMemoryWarning
@@ -29,25 +54,14 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (void)websiteBtnPressed:(UIButton *)button
+{
+    [[UIApplication sharedApplication] openURL:[_dict urlForStep:@1]];
+}
+
 - (void)verstuurButtonPressed:(UIButton *)button
 {
-    
+    self.dataObject.flaggedValue = YES;
 }
-
-- (void)viewWillAppear:(BOOL)animated
-{
-
-}
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

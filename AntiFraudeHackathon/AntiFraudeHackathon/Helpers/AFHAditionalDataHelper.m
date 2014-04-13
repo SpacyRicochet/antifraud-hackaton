@@ -10,14 +10,14 @@
 
 @implementation NSDictionary (AFH)
 
-- (CLLocation *)locationForStep:(NSNumber *)step
+- (CLLocationCoordinate2D)locationForStep:(NSNumber *)step
 {
     NSString *keyLat = [@"lat" stringByAppendingString:step.stringValue];
     NSString *keyLong = [@"long" stringByAppendingString:step.stringValue];
     NSString *stringLat = [self objectForKey:keyLat];
     NSString *stringLong = [self objectForKey:keyLong];
     
-    CLLocation *result = [[CLLocation alloc] initWithLatitude:stringLat.floatValue longitude:stringLong.floatValue];
+    CLLocationCoordinate2D result = CLLocationCoordinate2DMake(stringLat.floatValue, stringLong.floatValue);
     return result;
 }
 
@@ -39,6 +39,13 @@
 {
     NSString *imageName = [self objectForKey:@"image"];
     UIImage *result = [UIImage imageNamed:imageName];
+    return result;
+}
+
+- (NSString *)textForStep:(NSNumber *)step
+{
+    NSString *key = [@"maatregel" stringByAppendingString:step.stringValue];
+    NSString *result = [self objectForKey:key];
     return result;
 }
 

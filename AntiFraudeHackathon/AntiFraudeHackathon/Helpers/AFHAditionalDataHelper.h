@@ -11,8 +11,9 @@
 
 @interface NSDictionary (AFH)
 
-- (CLLocation *)locationForStep:(NSNumber *)step;
+- (CLLocationCoordinate2D)locationForStep:(NSNumber *)step;
 - (NSURL *)urlForStep:(NSNumber *)step;
+- (NSString *)textForStep:(NSNumber *)step;
 - (NSString *)information;
 - (UIImage *)image;
 

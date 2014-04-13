@@ -82,7 +82,6 @@
 
 - (void)reportButtonPressed
 {
-    _dataObject.flaggedValue = YES;
     [self performSegueWithIdentifier:@"reportSegue" sender:self];
 }
 

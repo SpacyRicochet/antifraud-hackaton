@@ -682,7 +682,7 @@
 				GCC_PREFIX_HEADER = "AntiFraudeHackathon/AntiFraudeHackathon-Prefix.pch";
 				INFOPLIST_FILE = "AntiFraudeHackathon/AntiFraudeHackathon-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "6ABEF3BC-3157-4B64-9C7E-A01B2B3A0ABF";
+				PROVISIONING_PROFILE = "A666EB8E-CABD-4657-B101-7073EF06D564";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -700,7 +700,7 @@
 				GCC_PREFIX_HEADER = "AntiFraudeHackathon/AntiFraudeHackathon-Prefix.pch";
 				INFOPLIST_FILE = "AntiFraudeHackathon/AntiFraudeHackathon-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "6ABEF3BC-3157-4B64-9C7E-A01B2B3A0ABF";
+				PROVISIONING_PROFILE = "A666EB8E-CABD-4657-B101-7073EF06D564";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
