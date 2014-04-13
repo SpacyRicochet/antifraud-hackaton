@@ -12,5 +12,6 @@
 @interface AFHDetailViewController : UIViewController
 
 @property (nonatomic, retain) AFHDataObject *dataObject;
+@property (nonatomic, retain) UIImage *image;
 
 @end

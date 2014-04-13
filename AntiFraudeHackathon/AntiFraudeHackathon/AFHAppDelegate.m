@@ -7,12 +7,35 @@
 //
 
 #import "AFHAppDelegate.h"
+#import "AFHParseChief.h"
+#import "AFHCoreDataChief.h"
+#import <CoreData/CoreData.h>
+
+@interface AFHAppDelegate ()
+
+@property (nonatomic, strong) AFHParseChief *parseChief;
+@property (nonatomic, strong) AFHCoreDataChief *coreDataChief;
+
+@end
 
 @implementation AFHAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
     // Override point for customization after application launch.
+    
+    // Setup chiefs
+    self.parseChief = [AFHParseChief shared];
+    self.coreDataChief = [AFHCoreDataChief shared];
+    
+#ifdef DEBUG_RESET_DATABASE
+    [self.coreDataChief reset];
+    [self.parseChief reset];
+#endif
+    
+    [self.parseChief getActivitiesForManagedObjectContext:self.coreDataChief.managedObjectContext];
+    
     return YES;
 }
 							
@@ -41,6 +64,18 @@
 - (void)applicationWillTerminate:(UIApplication *)application
 {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+}
+
+#pragma mark - Push notifications
+
+- (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken
+{
+    [self.parseChief didRegisterForRemoteNotificationsWithDeviceToken:deviceToken];
+}
+
+- (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo
+{
+    [self.parseChief didReceiveRemoteNotification:userInfo managedObjectContext:self.coreDataChief.managedObjectContext];
 }
 
 @end
