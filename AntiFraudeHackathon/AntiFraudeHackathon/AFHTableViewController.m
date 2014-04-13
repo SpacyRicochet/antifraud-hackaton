@@ -15,7 +15,6 @@
 
 @interface AFHTableViewController () <NWComposedTableViewDataSourceDelegate>
 
-@property (nonatomic, strong) NSMutableArray *dataObjects;
 @property (nonatomic, strong) NWComposedTableViewDataSource *composedDataSource;
 @property (nonatomic, strong) NSFetchedResultsController *fetchedResultsController;
 @property (nonatomic) NSUInteger selectedRow;
@@ -48,18 +47,6 @@
 - (UIStatusBarAnimation)preferredStatusBarUpdateAnimation
 {
     return UIStatusBarAnimationSlide;
-}
-
-- (BOOL)prefersStatusBarHidden
-{
-    if (self.dataObjects)
-    {
-        return NO;
-    }
-    else
-    {
-        return YES;
-    }
 }
 
 #pragma mark - Setup Datasource
@@ -198,7 +185,7 @@
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
     AFHDetailViewController *detailVC = [segue destinationViewController];
-    detailVC.dataObject = [self.dataObjects objectAtIndex:self.selectedRow];
+    detailVC.dataObject = [self.fetchedResultsController.fetchedObjects objectAtIndex:self.selectedRow];
     UITableViewCell *cell = (UITableViewCell *)[self.tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:self.selectedRow inSection:0]];
     detailVC.image = cell.imageView.image;
 }

@@ -7,10 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
-@class AFHDataObject;
+#import "AFHActivity.h"
 
 @interface AFHReportViewController : UIViewController
 
-@property (nonatomic, retain) AFHDataObject *dataObject;
+@property (nonatomic, retain) AFHActivity *dataObject;
 
 @end

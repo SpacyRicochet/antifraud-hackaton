@@ -63,11 +63,12 @@
 		ABE7F2F318F99D7C001DCE83 /* AFHDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ABE7F2F218F99D7C001DCE83 /* AFHDetailViewController.m */; };
 		ABE7F2F918F9C45E001DCE83 /* AFHNavViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ABE7F2F818F9C45E001DCE83 /* AFHNavViewController.m */; };
 		ABE7F2FC18F9C63D001DCE83 /* AFHReportViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ABE7F2FB18F9C63D001DCE83 /* AFHReportViewController.m */; };
-		DEE3949418FA7D7C00A1545F /* AFHActivityStringParser.m in Sources */ = {isa = PBXBuildFile; fileRef = DEE3949318FA7D7C00A1545F /* AFHActivityStringParser.m */; };
+		DEE3949418FA7D7C00A1545F /* AFHAditionalDataHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = DEE3949318FA7D7C00A1545F /* AFHAditionalDataHelper.m */; };
 		DEE3949A18FA881900A1545F /* AFHStepOneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DEE3949918FA881900A1545F /* AFHStepOneViewController.m */; };
 		DEE3949D18FA882900A1545F /* AFHStepTwoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DEE3949C18FA882900A1545F /* AFHStepTwoViewController.m */; };
 		DEE394A218FA8B9400A1545F /* AFHStepOneViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DEE394A118FA8B9400A1545F /* AFHStepOneViewController.xib */; };
 		DEE394A818FA9DFA00A1545F /* AFHStepTwoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DEE394A718FA9DFA00A1545F /* AFHStepTwoViewController.xib */; };
+		DEE394AA18FAA79000A1545F /* mockedData.json in Resources */ = {isa = PBXBuildFile; fileRef = DEE394A918FAA79000A1545F /* mockedData.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -144,14 +145,15 @@
 		ABE7F2FA18F9C63D001DCE83 /* AFHReportViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHReportViewController.h; sourceTree = "<group>"; };
 		ABE7F2FB18F9C63D001DCE83 /* AFHReportViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHReportViewController.m; sourceTree = "<group>"; };
 		DEE3948F18FA7BA200A1545F /* AFHTypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTypes.h; sourceTree = "<group>"; };
-		DEE3949218FA7D7C00A1545F /* AFHActivityStringParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHActivityStringParser.h; sourceTree = "<group>"; };
-		DEE3949318FA7D7C00A1545F /* AFHActivityStringParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHActivityStringParser.m; sourceTree = "<group>"; };
+		DEE3949218FA7D7C00A1545F /* AFHAditionalDataHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHAditionalDataHelper.h; sourceTree = "<group>"; };
+		DEE3949318FA7D7C00A1545F /* AFHAditionalDataHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHAditionalDataHelper.m; sourceTree = "<group>"; };
 		DEE3949818FA881900A1545F /* AFHStepOneViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHStepOneViewController.h; sourceTree = "<group>"; };
 		DEE3949918FA881900A1545F /* AFHStepOneViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHStepOneViewController.m; sourceTree = "<group>"; };
 		DEE3949B18FA882900A1545F /* AFHStepTwoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHStepTwoViewController.h; sourceTree = "<group>"; };
 		DEE3949C18FA882900A1545F /* AFHStepTwoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHStepTwoViewController.m; sourceTree = "<group>"; };
 		DEE394A118FA8B9400A1545F /* AFHStepOneViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AFHStepOneViewController.xib; sourceTree = "<group>"; };
 		DEE394A718FA9DFA00A1545F /* AFHStepTwoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AFHStepTwoViewController.xib; sourceTree = "<group>"; };
+		DEE394A918FAA79000A1545F /* mockedData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = mockedData.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -381,8 +383,9 @@
 			isa = PBXGroup;
 			children = (
 				DEE3948F18FA7BA200A1545F /* AFHTypes.h */,
-				DEE3949218FA7D7C00A1545F /* AFHActivityStringParser.h */,
-				DEE3949318FA7D7C00A1545F /* AFHActivityStringParser.m */,
+				DEE3949218FA7D7C00A1545F /* AFHAditionalDataHelper.h */,
+				DEE3949318FA7D7C00A1545F /* AFHAditionalDataHelper.m */,
+				DEE394A918FAA79000A1545F /* mockedData.json */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -465,6 +468,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DEE394AA18FAA79000A1545F /* mockedData.json in Resources */,
 				23CCA46418F9294A00C4EEE8 /* Images.xcassets in Resources */,
 				DEE394A818FA9DFA00A1545F /* AFHStepTwoViewController.xib in Resources */,
 				DEE394A218FA8B9400A1545F /* AFHStepOneViewController.xib in Resources */,
@@ -521,7 +525,7 @@
 				2307651118F9F79C0023D708 /* AFHActivity+Parse.m in Sources */,
 				2307650218F9DC980023D708 /* AFHParseChief.m in Sources */,
 				2307650C18F9E3A50023D708 /* NWCoreDataChief.m in Sources */,
-				DEE3949418FA7D7C00A1545F /* AFHActivityStringParser.m in Sources */,
+				DEE3949418FA7D7C00A1545F /* AFHAditionalDataHelper.m in Sources */,
 				DEE3949A18FA881900A1545F /* AFHStepOneViewController.m in Sources */,
 				DEE3949D18FA882900A1545F /* AFHStepTwoViewController.m in Sources */,
 				230764E318F9C0070023D708 /* _AFHActivity.m in Sources */,

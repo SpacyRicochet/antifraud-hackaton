@@ -7,11 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "AFHActivity.h"
 @class AFHDataObject;
 
 @interface AFHDetailViewController : UIViewController
 
-@property (nonatomic, retain) AFHDataObject *dataObject;
+@property (nonatomic, retain) AFHActivity *dataObject;
 @property (nonatomic, retain) UIImage *image;
 
 @end

@@ -8,6 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
-@interface AFHActivityStringParser : NSObject
+@interface AFHAditionalDataHelper : NSObject
+
++ (NSDictionary *)dictForKey:(NSString *)key;
 
 @end

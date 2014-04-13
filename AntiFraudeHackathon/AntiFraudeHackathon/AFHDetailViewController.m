@@ -20,6 +20,7 @@
 @property (weak, nonatomic) IBOutlet UIButton *reportButton;
 @property (weak, nonatomic) IBOutlet MKMapView *mapView;
 @property (weak, nonatomic) IBOutlet UIImageView *icon;
+@property (strong, nonatomic) IBOutlet UILabel *mainTextLabel;
 
 @end
 
@@ -31,11 +32,15 @@
     
     self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"" style:UIBarButtonItemStylePlain target:nil action:nil];
     
-    _descriptionLabel.text = _dataObject.description;
+    _descriptionLabel.text = _dataObject.event;
     _accessorLabel.text = _dataObject.accessor;
+    _databaseLabel.text = _dataObject.database;
+#warning look up event data
+    _mainTextLabel.text = @"";
     NSDateFormatter *dateFormatter = [NSDateFormatter new];
     [dateFormatter setTimeStyle:NSDateFormatterMediumStyle];
-    _timeLabel.text = [dateFormatter stringFromDate:_dataObject.timeStamp];
+    [dateFormatter setDateStyle:NSDateFormatterMediumStyle];
+    _timeLabel.text = [dateFormatter stringFromDate:_dataObject.date];
     [_icon setImage:_image];
     
     [_reportButton addTarget:self action:@selector(reportButtonPressed) forControlEvents:UIControlEventTouchUpInside];
@@ -46,7 +51,7 @@
 {
     [super viewWillAppear:animated];
     
-    if (_dataObject.flagged)
+    if (_dataObject.flaggedValue)
     {
         [_reportButton setTitle:NSLocalizedString(@"  Probleem gemeld  ", nil) forState:UIControlStateNormal];
     }
@@ -76,7 +81,7 @@
 
 - (void)reportButtonPressed
 {
-    _dataObject.flagged = YES;
+    _dataObject.flaggedValue = YES;
     [self performSegueWithIdentifier:@"reportSegue" sender:self];
 }
 
