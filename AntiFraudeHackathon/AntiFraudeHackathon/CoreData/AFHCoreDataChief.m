@@ -21,6 +21,10 @@
         NSURL *storeURL = [[[[NSFileManager defaultManager] URLsForDirectory:NSCachesDirectory inDomains:NSUserDomainMask] lastObject] URLByAppendingPathComponent:@"AntiFraude.sqlite"];
 
         result = [[AFHCoreDataChief alloc] initWithModelURL:modelURL storeURL:storeURL];
+        
+#ifdef DEBUG_RESET_DATABASE
+        [result resetDatabase];
+#endif
     });
     return result;
 }
@@ -33,6 +37,15 @@
         NWLogInfo(@"Already populated. Skip adding demo data.");
         return;
     }
+}
+
+- (void)resetDatabase
+{
+    NSArray *fetchedObjects = [NWCoreData fetchObjectsFromContext:self.managedObjectContext entityName:[AFHActivity entityName]];
+    for (__unsafe_unretained NSManagedObject *toBeDeleted in fetchedObjects) {
+        [self.managedObjectContext deleteObject:toBeDeleted];
+    }
+    [self save];
 }
 
 - (BOOL)isPopulated

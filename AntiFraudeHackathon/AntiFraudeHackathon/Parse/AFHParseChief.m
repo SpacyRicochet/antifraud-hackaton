@@ -10,13 +10,7 @@
 #import <Parse/Parse.h>
 #import "AFHActivity.h"
 #import "AFHActivity+Parse.h"
-
-static NSString * const ParseDefaultsLastFetchDate = @"lastFetchDate";
-
-static NSString * const ParseActivityClass = @"Activity";
-static NSString * const ParseActivityCreation = @"createdAt";
-
-static NSString * const ParseNotificationAlert = @"alert";
+#import "AFHParseConstants.h"
 
 @implementation AFHParseChief
 
@@ -58,17 +52,22 @@ static NSString * const ParseNotificationAlert = @"alert";
 
 #pragma mark - Fetching activities
 
-- (void)fetchActivities
+- (void)getActivitiesForManagedObjectContext:(NSManagedObjectContext *)context
 {
-    [self fetchActivitiesSinceDate:[self dateSinceLastFetch]];
+    [self getActivitiesSinceDate:[self dateSinceLastGet] managedObjectContext:context];
 }
 
-- (void)fetchActivitiesSinceDate:(NSDate *)date managedObjectContext:(NSManagedObjectContext *)context
+- (void)getActivitiesSinceDate:(NSDate *)date managedObjectContext:(NSManagedObjectContext *)context
 {
     NWLog(@"Fetching activities since date: %@", date);
     
-    PFQuery *query = [PFQuery queryWithClassName:ParseActivityClass];
+    NSPredicate *datePredicate = [NSPredicate predicateWithFormat:@"createdAt > %@", date];
+    PFQuery *query = [PFQuery queryWithClassName:ParseActivityClass predicate:datePredicate];
     [query orderByDescending:ParseActivityCreation];
+    
+    [query includeKey:ParseActivityIncludeAccessor];
+    [query includeKey:ParseActivityIncludeSource];
+    
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
         if (error) {
             NWError(error);
@@ -78,26 +77,29 @@ static NSString * const ParseNotificationAlert = @"alert";
         for (__unsafe_unretained PFObject *object in objects) {
             NWLog(@"Found object: %@", object);
             
-            [AFHActivity newWithParseObject:object managedObjectContext:context];
+            AFHActivity *newActivity = [AFHActivity newWithParseObject:object managedObjectContext:context];
+            
+            NWLog(@"testing nested classes: %@ %@", newActivity.source, newActivity.institution);
         }
         
-        [self saveNowAsLastFetchDate];
+        [self saveNowAsLastGetDate];
     }];
 }
 
 #pragma mark - Last fetch date
 
-- (NSDate *)dateSinceLastFetch
+- (NSDate *)dateSinceLastGet
 {
     NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
-    NSDate *lastFetchDate = [userDefaults objectForKey:ParseDefaultsLastFetchDate];
+    NSDate *lastFetchDate = [userDefaults objectForKey:ParseDefaultsLastGetDate];
+    lastFetchDate = lastFetchDate ?: [NSDate dateWithTimeIntervalSince1970:0];
     return lastFetchDate;
 }
 
-- (void)saveNowAsLastFetchDate
+- (void)saveNowAsLastGetDate
 {
     NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
-    [userDefaults setObject:[NSDate date] forKey:ParseDefaultsLastFetchDate];
+    [userDefaults setObject:[NSDate date] forKey:ParseDefaultsLastGetDate];
     [userDefaults synchronize];
 }
 

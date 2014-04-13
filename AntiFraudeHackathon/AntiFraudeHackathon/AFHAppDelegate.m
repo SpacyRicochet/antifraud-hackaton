@@ -27,9 +27,9 @@
     
     // Setup Parse
     self.parseChief = [AFHParseChief shared];
-    [self.parseChief fetchActivities];
-    
     self.managedObjectContext = [AFHCoreDataChief shared].managedObjectContext;
+    
+    [self.parseChief getActivitiesForManagedObjectContext:self.managedObjectContext];
     
     return YES;
 }

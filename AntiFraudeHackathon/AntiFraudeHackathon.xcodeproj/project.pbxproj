@@ -42,6 +42,7 @@
 		2307650E18F9E4CE0023D708 /* NWLogging.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2307650D18F9E4CE0023D708 /* NWLogging.framework */; };
 		2307651118F9F79C0023D708 /* AFHActivity+Parse.m in Sources */ = {isa = PBXBuildFile; fileRef = 2307651018F9F79C0023D708 /* AFHActivity+Parse.m */; };
 		2307651418F9F8A50023D708 /* AFHParseConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 2307651318F9F8A50023D708 /* AFHParseConstants.m */; };
+		2307651718FA09FA0023D708 /* AFHDebug.m in Sources */ = {isa = PBXBuildFile; fileRef = 2307651618FA09FA0023D708 /* AFHDebug.m */; };
 		23CCA44C18F9294A00C4EEE8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23CCA44B18F9294A00C4EEE8 /* Foundation.framework */; };
 		23CCA44E18F9294A00C4EEE8 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23CCA44D18F9294A00C4EEE8 /* CoreGraphics.framework */; };
 		23CCA45018F9294A00C4EEE8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23CCA44F18F9294A00C4EEE8 /* UIKit.framework */; };
@@ -105,6 +106,8 @@
 		2307651018F9F79C0023D708 /* AFHActivity+Parse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AFHActivity+Parse.m"; sourceTree = "<group>"; };
 		2307651218F9F8A50023D708 /* AFHParseConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHParseConstants.h; sourceTree = "<group>"; };
 		2307651318F9F8A50023D708 /* AFHParseConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHParseConstants.m; sourceTree = "<group>"; };
+		2307651518FA09FA0023D708 /* AFHDebug.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHDebug.h; sourceTree = "<group>"; };
+		2307651618FA09FA0023D708 /* AFHDebug.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHDebug.m; sourceTree = "<group>"; };
 		23CCA44818F9294A00C4EEE8 /* AntiFraudeHackathon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AntiFraudeHackathon.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		23CCA44B18F9294A00C4EEE8 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		23CCA44D18F9294A00C4EEE8 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -287,6 +290,8 @@
 				230764D318F9BA850023D708 /* CoreData */,
 				23CCA45A18F9294A00C4EEE8 /* AFHAppDelegate.h */,
 				23CCA45B18F9294A00C4EEE8 /* AFHAppDelegate.m */,
+				2307651518FA09FA0023D708 /* AFHDebug.h */,
+				2307651618FA09FA0023D708 /* AFHDebug.m */,
 				23CCA45D18F9294A00C4EEE8 /* Main.storyboard */,
 				ABE7F2F018F99D6C001DCE83 /* View Controllers */,
 				ABE7F2EF18F99D62001DCE83 /* Model */,
@@ -472,6 +477,7 @@
 				2307650B18F9E3A50023D708 /* NWCoreData.m in Sources */,
 				ABE7F2F918F9C45E001DCE83 /* AFHNavViewController.m in Sources */,
 				ABE7F2F318F99D7C001DCE83 /* AFHDetailViewController.m in Sources */,
+				2307651718FA09FA0023D708 /* AFHDebug.m in Sources */,
 				2307651418F9F8A50023D708 /* AFHParseConstants.m in Sources */,
 				ABE7F2E918F97BBB001DCE83 /* AFHTableViewController.m in Sources */,
 				230764E218F9C0070023D708 /* AFHActivity.m in Sources */,
@@ -703,6 +709,7 @@
 				230764DA18F9BF010023D708 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		23CCA44318F9294A00C4EEE8 /* Build configuration list for PBXProject "AntiFraudeHackathon" */ = {
 			isa = XCConfigurationList;

@@ -14,8 +14,8 @@
 
 - (void)didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken;
 - (void)didReceiveRemoteNotification:(NSDictionary *)userInfo managedObjectContext:(NSManagedObjectContext *)context;
-- (void)fetchActivities;
-- (void)fetchActivitiesSinceDate:(NSDate *)date;
+- (void)getActivitiesForManagedObjectContext:(NSManagedObjectContext *)context;
+- (void)getActivitiesSinceDate:(NSDate *)date managedObjectContext:(NSManagedObjectContext *)context;
 
 
 @end

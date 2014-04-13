@@ -27,8 +27,8 @@
     result.city             = object[ParseActivityCity];
     result.event            = object[ParseActivityEvent];
     result.flagged          = object[ParseActivityFlagged];
-    result.institution      = object[ParseActivityInstitution];
-    result.source           = object[ParseActivitySource];
+    result.institution      = object[ParseActivityIncludeAccessor][ParseOrganizationName];
+    result.source           = object[ParseActivityIncludeSource][ParseSourceDatabase];
     
     PFGeoPoint *geoPoint    = object[ParseActivityLocation];
     result.latitudeValue    = geoPoint.latitude;
