@@ -12,6 +12,7 @@
 #import "NWComposedTableViewDataSource.h"
 #import "AFHActivity.h"
 #import "AFHCoreDataChief.h"
+#import "AFHActivityTableViewCell.h"
 
 @interface AFHTableViewController () <NWComposedTableViewDataSourceDelegate>
 
@@ -19,6 +20,7 @@
 @property (nonatomic, strong) NWComposedTableViewDataSource *composedDataSource;
 @property (nonatomic, strong) NSFetchedResultsController *fetchedResultsController;
 @property (nonatomic) NSUInteger selectedRow;
+@property (nonatomic, strong) NSDateFormatter *dateFormatter;
 @end
 
 @implementation AFHTableViewController
@@ -34,6 +36,8 @@
     request.sortDescriptors = @[[NSSortDescriptor sortDescriptorWithKey:@"date" ascending:NO]];
     NSFetchedResultsController *fetchedResultsController = [[NSFetchedResultsController alloc] initWithFetchRequest:request managedObjectContext:[AFHCoreDataChief shared].managedObjectContext sectionNameKeyPath:nil cacheName:nil];
     self.fetchedResultsController = fetchedResultsController;
+    
+    self.tableView.backgroundColor = [UIColor darkGrayColor];
     
     [self setupDataSource];
 }
@@ -68,6 +72,7 @@
 {
     self.composedDataSource = [[NWComposedTableViewDataSource alloc] initWithTableView:self.tableView];
     self.composedDataSource.delegate = self;
+    self.composedDataSource.tableViewRowAnimationInsert = UITableViewRowAnimationLeft;
 }
 
 #pragma mark - Composed Table View Data Source Delegate
@@ -82,13 +87,24 @@
     return self.fetchedResultsController;
 }
 
+- (NSDateFormatter *)dateFormatter
+{
+    if (_dateFormatter) {
+        return _dateFormatter;
+    }
+    
+    _dateFormatter = [NSDateFormatter new];
+    [_dateFormatter setDateStyle:NSDateFormatterShortStyle];
+    [_dateFormatter setTimeStyle:NSDateFormatterShortStyle];
+    return _dateFormatter;
+}
+
 - (void)tableViewDataSource:(NWComposedTableViewDataSource *)dataSource configureCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath withObject:(AFHActivity *)activity
 {
     cell.textLabel.text = activity.event;
     
-    NSDateFormatter *dateFormatter = [NSDateFormatter new];
-    [dateFormatter setDateStyle:NSDateFormatterMediumStyle];
-    [dateFormatter setTimeStyle:NSDateFormatterMediumStyle];
+    NSString *dateString = [self.dateFormatter stringFromDate:activity.date];
+    cell.detailTextLabel.text = [NSString stringWithFormat:@"%@, %@", activity.accessor, dateString];
     
     int i = indexPath.row % 4;
     switch (i) {
@@ -107,6 +123,11 @@
         default:
             break;
     }
+}
+
+- (Class)tableViewDataSource:(NWComposedTableViewDataSource *)dataSource cellClassForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return [AFHActivityTableViewCell class];
 }
 
 //#pragma mark - Table view data source
