@@ -7,9 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <MapKit/MapKit.h>
 
 @interface AFHStepOneViewController : UIViewController
 
 @property (strong, nonatomic) IBOutlet UIButton *verstuurMeldingBtn;
+@property (strong, nonatomic) IBOutlet UITextView *textField;
+@property (strong, nonatomic) IBOutlet UIButton *websiteBtn;
+@property (strong, nonatomic) IBOutlet MKMapView *mapView;
 
 @end

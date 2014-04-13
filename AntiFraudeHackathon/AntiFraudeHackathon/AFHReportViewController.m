@@ -10,7 +10,6 @@
 #import "AFHDataObject.h"
 #import "AFHStepOneViewController.h"
 #import "AFHStepTwoViewController.h"
-#import "AFHStepThreeViewController.h"
 
 @interface AFHReportViewController () <UIScrollViewDelegate>
 {
@@ -52,7 +51,9 @@
 {
     AFHStepOneViewController *vc1 = [AFHStepOneViewController new];
     AFHStepTwoViewController *vc2 = [AFHStepTwoViewController new];
-    AFHStepThreeViewController *vc3 = [AFHStepThreeViewController new];
+    vc2.title = @"2. Rapporteer";
+    AFHStepTwoViewController *vc3 = [AFHStepTwoViewController new];
+    vc3.title = @"3. Extra";
     
     _stepsViewControllers = @[vc1, vc2, vc3];
     _pageControl.numberOfPages = _stepsViewControllers.count;

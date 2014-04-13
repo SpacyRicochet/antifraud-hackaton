@@ -19,6 +19,7 @@
     [super viewDidLoad];
     [_verstuurMeldingBtn addTarget:self action:@selector(verstuurButtonPressed:) forControlEvents:UIControlEventTouchUpInside];
     _verstuurMeldingBtn.layer.cornerRadius = 5;
+    _websiteBtn.layer.cornerRadius = 5;
     self.title = @"1. Controleer";
 }
 
@@ -31,6 +32,11 @@
 - (void)verstuurButtonPressed:(UIButton *)button
 {
     
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+
 }
 
 /*

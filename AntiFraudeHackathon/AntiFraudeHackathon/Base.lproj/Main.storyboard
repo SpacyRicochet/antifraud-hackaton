@@ -116,17 +116,22 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Database" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kdX-kc-oeG">
+                                <rect key="frame" x="20" y="112" width="280" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="YKN-Dg-cFH">
-                                <rect key="frame" x="0.0" y="169" width="320" height="399"/>
+                                <rect key="frame" x="0.0" y="218" width="320" height="350"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                             </mapView>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b9X-Ug-cab">
-                                <rect key="frame" x="20" y="113" width="280" height="40"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b9X-Ug-cab">
+                                <rect key="frame" x="20" y="153" width="280" height="40"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="4LD-bd-GSa"/>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="112" id="Gfz-JN-YqE"/>
+                                    <constraint firstAttribute="height" constant="40" id="ngT-Ll-OCp"/>
                                 </constraints>
                                 <state key="normal" title="  Meld probleem!  ">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -147,20 +152,24 @@
                             <constraint firstItem="Nv6-cX-Ady" firstAttribute="top" secondItem="YKN-Dg-cFH" secondAttribute="bottom" id="3Nf-sV-c5z"/>
                             <constraint firstItem="qK0-eC-ud6" firstAttribute="leading" secondItem="dKh-Ym-Tod" secondAttribute="trailing" constant="8" id="7d2-g7-5Bf"/>
                             <constraint firstItem="dKh-Ym-Tod" firstAttribute="leading" secondItem="ruS-6f-AR8" secondAttribute="leading" constant="20" id="8gx-Sk-N2J"/>
+                            <constraint firstItem="b9X-Ug-cab" firstAttribute="top" secondItem="ruS-6f-AR8" secondAttribute="top" constant="153" id="CZa-DD-kdU"/>
                             <constraint firstItem="qK0-eC-ud6" firstAttribute="leading" secondItem="HTW-PG-CoW" secondAttribute="trailing" constant="8" id="GKP-jr-51t"/>
-                            <constraint firstItem="YKN-Dg-cFH" firstAttribute="top" secondItem="b9X-Ug-cab" secondAttribute="bottom" constant="16" id="HXu-pO-5Qr"/>
+                            <constraint firstItem="b9X-Ug-cab" firstAttribute="leading" secondItem="kdX-kc-oeG" secondAttribute="leading" id="MoX-FK-sOS"/>
                             <constraint firstAttribute="trailing" secondItem="YKN-Dg-cFH" secondAttribute="trailing" id="Qfd-aX-fhO"/>
                             <constraint firstAttribute="trailing" secondItem="swV-zU-208" secondAttribute="trailing" constant="20" id="UXd-vf-YdT"/>
                             <constraint firstItem="dKh-Ym-Tod" firstAttribute="top" secondItem="Wov-a4-3oo" secondAttribute="bottom" constant="20" id="UpE-SM-OzL"/>
-                            <constraint firstItem="b9X-Ug-cab" firstAttribute="leading" secondItem="ruS-6f-AR8" secondAttribute="leading" constant="20" id="WL9-H2-NpF"/>
+                            <constraint firstItem="b9X-Ug-cab" firstAttribute="leading" secondItem="swV-zU-208" secondAttribute="leading" id="UuK-Cp-Fgn"/>
                             <constraint firstItem="HTW-PG-CoW" firstAttribute="leading" secondItem="ruS-6f-AR8" secondAttribute="leading" constant="20" id="XWZ-fh-EEI"/>
+                            <constraint firstItem="b9X-Ug-cab" firstAttribute="top" secondItem="kdX-kc-oeG" secondAttribute="bottom" constant="20" id="Y9x-Mq-ikB"/>
+                            <constraint firstItem="b9X-Ug-cab" firstAttribute="trailing" secondItem="swV-zU-208" secondAttribute="trailing" id="apM-8o-vJt"/>
                             <constraint firstItem="swV-zU-208" firstAttribute="top" secondItem="HTW-PG-CoW" secondAttribute="bottom" constant="8" id="asC-aC-el8"/>
                             <constraint firstItem="HTW-PG-CoW" firstAttribute="top" secondItem="dKh-Ym-Tod" secondAttribute="bottom" constant="6" id="ecP-xJ-Veq"/>
                             <constraint firstItem="YKN-Dg-cFH" firstAttribute="leading" secondItem="ruS-6f-AR8" secondAttribute="leading" id="gVk-oV-vsJ"/>
-                            <constraint firstItem="b9X-Ug-cab" firstAttribute="top" secondItem="swV-zU-208" secondAttribute="bottom" constant="14" id="hig-1g-vmg"/>
                             <constraint firstItem="qK0-eC-ud6" firstAttribute="top" secondItem="Wov-a4-3oo" secondAttribute="bottom" constant="20" id="mTa-UJ-Kkp"/>
+                            <constraint firstItem="b9X-Ug-cab" firstAttribute="trailing" secondItem="kdX-kc-oeG" secondAttribute="trailing" id="qk0-vF-DHE"/>
                             <constraint firstItem="swV-zU-208" firstAttribute="leading" secondItem="ruS-6f-AR8" secondAttribute="leading" constant="20" id="qti-aC-1sz"/>
                             <constraint firstAttribute="trailing" secondItem="qK0-eC-ud6" secondAttribute="trailing" constant="20" id="tsz-bW-P1K"/>
+                            <constraint firstItem="YKN-Dg-cFH" firstAttribute="top" secondItem="b9X-Ug-cab" secondAttribute="bottom" constant="25" id="u7U-F9-3hz"/>
                         </constraints>
                     </view>
                     <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
@@ -170,6 +179,7 @@
                     <nil key="simulatedStatusBarMetrics"/>
                     <connections>
                         <outlet property="accessorLabel" destination="HTW-PG-CoW" id="Nhr-oN-hGw"/>
+                        <outlet property="databaseLabel" destination="kdX-kc-oeG" id="Don-31-x58"/>
                         <outlet property="descriptionLabel" destination="dKh-Ym-Tod" id="cVi-jz-weQ"/>
                         <outlet property="icon" destination="qK0-eC-ud6" id="V2g-RD-rbI"/>
                         <outlet property="mapView" destination="YKN-Dg-cFH" id="cM1-lP-e4F"/>

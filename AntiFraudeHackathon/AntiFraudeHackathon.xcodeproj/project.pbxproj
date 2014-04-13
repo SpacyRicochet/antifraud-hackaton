@@ -66,10 +66,8 @@
 		DEE3949418FA7D7C00A1545F /* AFHActivityStringParser.m in Sources */ = {isa = PBXBuildFile; fileRef = DEE3949318FA7D7C00A1545F /* AFHActivityStringParser.m */; };
 		DEE3949A18FA881900A1545F /* AFHStepOneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DEE3949918FA881900A1545F /* AFHStepOneViewController.m */; };
 		DEE3949D18FA882900A1545F /* AFHStepTwoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DEE3949C18FA882900A1545F /* AFHStepTwoViewController.m */; };
-		DEE394A018FA883A00A1545F /* AFHStepThreeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DEE3949F18FA883A00A1545F /* AFHStepThreeViewController.m */; };
 		DEE394A218FA8B9400A1545F /* AFHStepOneViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DEE394A118FA8B9400A1545F /* AFHStepOneViewController.xib */; };
-		DEE394A418FA8BBD00A1545F /* AFHStepTwoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DEE394A318FA8BBD00A1545F /* AFHStepTwoViewController.xib */; };
-		DEE394A618FA8BDB00A1545F /* AFHStepThreeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DEE394A518FA8BDB00A1545F /* AFHStepThreeViewController.xib */; };
+		DEE394A818FA9DFA00A1545F /* AFHStepTwoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DEE394A718FA9DFA00A1545F /* AFHStepTwoViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -152,11 +150,8 @@
 		DEE3949918FA881900A1545F /* AFHStepOneViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHStepOneViewController.m; sourceTree = "<group>"; };
 		DEE3949B18FA882900A1545F /* AFHStepTwoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHStepTwoViewController.h; sourceTree = "<group>"; };
 		DEE3949C18FA882900A1545F /* AFHStepTwoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHStepTwoViewController.m; sourceTree = "<group>"; };
-		DEE3949E18FA883A00A1545F /* AFHStepThreeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHStepThreeViewController.h; sourceTree = "<group>"; };
-		DEE3949F18FA883A00A1545F /* AFHStepThreeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHStepThreeViewController.m; sourceTree = "<group>"; };
 		DEE394A118FA8B9400A1545F /* AFHStepOneViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AFHStepOneViewController.xib; sourceTree = "<group>"; };
-		DEE394A318FA8BBD00A1545F /* AFHStepTwoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AFHStepTwoViewController.xib; sourceTree = "<group>"; };
-		DEE394A518FA8BDB00A1545F /* AFHStepThreeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AFHStepThreeViewController.xib; sourceTree = "<group>"; };
+		DEE394A718FA9DFA00A1545F /* AFHStepTwoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AFHStepTwoViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -377,10 +372,7 @@
 				DEE394A118FA8B9400A1545F /* AFHStepOneViewController.xib */,
 				DEE3949B18FA882900A1545F /* AFHStepTwoViewController.h */,
 				DEE3949C18FA882900A1545F /* AFHStepTwoViewController.m */,
-				DEE394A318FA8BBD00A1545F /* AFHStepTwoViewController.xib */,
-				DEE3949E18FA883A00A1545F /* AFHStepThreeViewController.h */,
-				DEE3949F18FA883A00A1545F /* AFHStepThreeViewController.m */,
-				DEE394A518FA8BDB00A1545F /* AFHStepThreeViewController.xib */,
+				DEE394A718FA9DFA00A1545F /* AFHStepTwoViewController.xib */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -474,10 +466,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				23CCA46418F9294A00C4EEE8 /* Images.xcassets in Resources */,
-				DEE394A418FA8BBD00A1545F /* AFHStepTwoViewController.xib in Resources */,
+				DEE394A818FA9DFA00A1545F /* AFHStepTwoViewController.xib in Resources */,
 				DEE394A218FA8B9400A1545F /* AFHStepOneViewController.xib in Resources */,
 				23CCA45618F9294A00C4EEE8 /* InfoPlist.strings in Resources */,
-				DEE394A618FA8BDB00A1545F /* AFHStepThreeViewController.xib in Resources */,
 				23CCA45F18F9294A00C4EEE8 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -521,7 +512,6 @@
 				ABE7F2F318F99D7C001DCE83 /* AFHDetailViewController.m in Sources */,
 				2307651718FA09FA0023D708 /* AFHDebug.m in Sources */,
 				2307651418F9F8A50023D708 /* AFHParseConstants.m in Sources */,
-				DEE394A018FA883A00A1545F /* AFHStepThreeViewController.m in Sources */,
 				ABE7F2E918F97BBB001DCE83 /* AFHTableViewController.m in Sources */,
 				230764E218F9C0070023D708 /* AFHActivity.m in Sources */,
 				ABE7F2EC18F97C40001DCE83 /* AFHDataObject.m in Sources */,

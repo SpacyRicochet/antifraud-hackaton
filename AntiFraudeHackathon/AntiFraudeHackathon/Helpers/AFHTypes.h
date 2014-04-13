@@ -24,16 +24,16 @@ typedef NS_ENUM(NSUInteger, AFHFraudeType)
     kAFHFraudeTypeDigiDLogin
 };
 
-typedef NS_ENUM(NSUInteger, AFHInstantieType)
-{
-    kAFHInstantieTypeOverheid,
-    kAFHInstantieTypeDNB,
-    kAFHInstantieTypePolitie,
-    kAFHInstantieTypeRPS,
-    kAFHInstantieTypeBKR,
-    kAFHInstantieTypeKVK,
-    kAFHInstantieTypeComputer
-};
+//typedef NS_ENUM(NSUInteger, AFHInstantieType)
+//{
+//    kAFHInstantieTypeOverheid,
+//    kAFHInstantieTypeDNB,
+//    kAFHInstantieTypePolitie,
+//    kAFHInstantieTypeRPS,
+//    kAFHInstantieTypeBKR,
+//    kAFHInstantieTypeKVK,
+//    kAFHInstantieTypeComputer
+//};
 
 typedef NS_ENUM(NSUInteger, AFHDatabaseType)
 {

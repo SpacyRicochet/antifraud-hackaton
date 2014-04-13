@@ -15,11 +15,6 @@
     return kAFHFraudeTypeAangifteInbraak;
 }
 
-+ (AFHInstantieType)instantieTypeFromAccessorString:(NSString *)accessor
-{
-    return kAFHInstantieTypeComputer;
-}
-
 + (NSArray *)databasesFromDatabaseString:(NSString *)databaseString
 {
     NSArray *databaseStrings = [databaseString componentsSeparatedByString:@","];
@@ -73,25 +68,6 @@
             [result addObject:type];
             continue;
         }
-    }
-    return result;
-}
-
-+ (NSArray *)stappenForInstantie:(AFHInstantieType)instantieType
-{
-    NSMutableArray *result = [NSMutableArray array];
-    NSNumber *type = [NSNumber numberWithInteger:kAFHStappenTypeControle];
-    [result addObject:type];
-    switch (instantieType) {
-        case kAFHInstantieTypeBKR:
-        case kAFHInstantieTypeComputer:
-        case kAFHInstantieTypeDNB:
-        case kAFHInstantieTypeKVK:
-        case kAFHInstantieTypeOverheid:
-        case kAFHInstantieTypePolitie:
-        case kAFHInstantieTypeRPS:
-        default:
-            break;
     }
     return result;
 }

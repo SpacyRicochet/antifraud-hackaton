@@ -17,7 +17,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.title = @"2. Rapporteer";
+    _websiteBtn.layer.cornerRadius = 5;
     // Do any additional setup after loading the view.
 }
 
