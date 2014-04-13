@@ -33,6 +33,11 @@
     [super viewWillAppear:animated];
     _dict = [AFHAditionalDataHelper dictForKey:self.dataObject.event];
     _textField.text = [_dict textForStep:@1];
+    if(self.dataObject.flaggedValue)
+    {
+        [_verstuurMeldingBtn setTitle:@"Misbruik gemeld" forState:UIControlStateNormal];
+        _verstuurMeldingBtn.enabled = NO;
+    }
 }
 
 - (void)viewDidAppear:(BOOL)animated
@@ -62,6 +67,8 @@
 - (void)verstuurButtonPressed:(UIButton *)button
 {
     self.dataObject.flaggedValue = YES;
+    [button setTitle:@"Misbruik gemeld" forState:UIControlStateNormal];
+    button.enabled = NO;
 }
 
 @end
