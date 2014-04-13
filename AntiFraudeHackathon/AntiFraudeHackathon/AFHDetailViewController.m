@@ -52,10 +52,11 @@
 {
     [super viewWillAppear:animated];
     
-//    if (_dataObject.flaggedValue)
-//    {
-//        [_reportButton setTitle:NSLocalizedString(@"  Probleem gemeld  ", nil) forState:UIControlStateNormal];
-//    }
+    if (_dataObject.flaggedValue)
+    {
+        [_reportButton setTitle:@"Meer informatie" forState:UIControlStateNormal];
+        _reportButton.backgroundColor = [UIColor colorWithRed:(19.f/255.f) green:(147.f/255.f) blue:(61.f/255.f) alpha:1.f];
+    }
 }
 
 - (void)viewDidAppear:(BOOL)animated
