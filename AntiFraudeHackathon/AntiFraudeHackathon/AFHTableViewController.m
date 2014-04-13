@@ -14,6 +14,7 @@
 #import "AFHCoreDataChief.h"
 #import "AFHActivityTableViewCell.h"
 #import "AFHAditionalDataHelper.h"
+#import "UIImage+Tint.h"
 
 @interface AFHTableViewController () <NWComposedTableViewDataSourceDelegate>
 
@@ -94,7 +95,12 @@
     NSString *dateString = [self.dateFormatter stringFromDate:activity.date];
     cell.detailTextLabel.text = [NSString stringWithFormat:@"%@, %@", activity.accessor, dateString];
     NSDictionary *dict = [AFHAditionalDataHelper dictForKey:activity.event];
-    [cell.imageView setImage:[dict image]];
+    UIImage *image = [dict image];
+    if(activity.flaggedValue)
+    {
+        image = [image imageTintedWithColor:[UIColor colorWithRed:(19.f/255.f) green:(147.f/255.f) blue:(61.f/255.f) alpha:1.f]];
+    }
+    [cell.imageView setImage:image];
 }
 
 - (Class)tableViewDataSource:(NWComposedTableViewDataSource *)dataSource cellClassForRowAtIndexPath:(NSIndexPath *)indexPath
