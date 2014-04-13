@@ -36,6 +36,7 @@
     if(self.dataObject.flaggedValue)
     {
         [_verstuurMeldingBtn setTitle:@"Misbruik gemeld" forState:UIControlStateNormal];
+        _verstuurMeldingBtn.backgroundColor = [UIColor colorWithRed:(19.f/255.f) green:(147.f/255.f) blue:(61.f/255.f) alpha:1.f];
         _verstuurMeldingBtn.enabled = NO;
     }
 }
@@ -68,6 +69,7 @@
 {
     self.dataObject.flaggedValue = YES;
     [button setTitle:@"Misbruik gemeld" forState:UIControlStateNormal];
+    button.backgroundColor = [UIColor colorWithRed:(19.f/255.f) green:(147.f/255.f) blue:(61.f/255.f) alpha:1.f];
     button.enabled = NO;
 }
 
