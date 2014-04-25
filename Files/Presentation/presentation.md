@@ -50,12 +50,20 @@ Het wapen van de burger tegen identiteitsfraude
 
 ---
 
-1. Toepasbaarheid
-2. Effectiviteit
-3. Inventiviteit
-4. Originaliteit
+Snel toepasbaar, omdat de informatie hierover al bestaat.
 
-^ 1. haalbaar + privacy -2. effectief? voorkomt? -3. nieuw? -4. origneel? verassend?
+---
+
+
+Effectief omdat de burger zelf beter inzicht heeft in geldig gebruik van haar ID
+
+---
+
+Voorziet in een behoefte om beter te weten wat er gebeurd met de ID
+
+---
+
+Voortbouwing en verbetering op huidige systemen, zoals DigiD
 
 ---
 
