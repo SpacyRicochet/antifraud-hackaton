@@ -33,7 +33,7 @@ Parse.Cloud.define("AddNewActivity", function(request, response) {
       city: 'Den Haag',
       srcDatabase: 'DigiD',
       location: new Parse.GeoPoint(52.083333,4.316667),
-      date: new Date(2014, 3, 19, 14, 00)
+      date: new Date(2014, 4, 2, 14, 00)
     },{
       description:"Aangifte inbraak",
       accessorName: 'Politie',
@@ -41,39 +41,39 @@ Parse.Cloud.define("AddNewActivity", function(request, response) {
       city: 'Den Haag',
       srcDatabase: 'GBA,BR,VR',
       location: new Parse.GeoPoint(52.083333,4.316667),
-      date: new Date(2014, 3, 21, 21, 30)
+      date: new Date(2014, 4, 2, 14, 00)
     },{
       description:"Paspoort vermist",
-      accessorName: 'Politie',
+      accessorName: 'computer',
       flaggedByUser: false,
       city: 'Den Haag',
-      srcDatabase: 'BR,VR',
+      srcDatabase: 'DigiD',
       location: new Parse.GeoPoint(52.083333,4.316667),
-      date: new Date(2014, 4, 10, 8, 10)
+      date: new Date(2014, 4, 2, 14, 00)
     },{
-      description:"Ingeschreven Groningen",
-      accessorName: 'Gemeente Groningen',
+      description:"DigiD",
+      accessorName: 'computer',
       flaggedByUser: false,
-      city: 'Groningen',
-      srcDatabase: 'Groningen',
-      location: new Parse.GeoPoint(52.216667,6.566667),
-      date: new Date(2014, 4, 10, 14, 00)
+      city: 'Den Haag',
+      srcDatabase: 'DigiD',
+      location: new Parse.GeoPoint(52.083333,4.316667),
+      date: new Date(2014, 4, 2, 14, 00)
     },{
-      description:"Bedrijf gestart",
-      accessorName: 'KvK',
+      description:"DigiD",
+      accessorName: 'computer',
       flaggedByUser: false,
-      city: 'Groningen',
-      srcDatabase: 'KvK',
-      location: new Parse.GeoPoint(52.216667,6.566667),
-      date: new Date(2014, 4, 10, 15, 00)
+      city: 'Den Haag',
+      srcDatabase: 'DigiD',
+      location: new Parse.GeoPoint(52.083333,4.316667),
+      date: new Date(2014, 4, 2, 14, 00)
     },{
-      description:"Overleden",
-      accessorName: "UMC Groningen",
+      description:"DigiD",
+      accessorName: 'computer',
       flaggedByUser: false,
-      city: 'Groningen',
-      srcDatabase: 'GBA,EPD',
-      location: new Parse.GeoPoint(52.216667,6.566667),
-      date: new Date(2014, 4, 12, 02, 42)
+      city: 'Den Haag',
+      srcDatabase: 'DigiD',
+      location: new Parse.GeoPoint(52.083333,4.316667),
+      date: new Date(2014, 4, 2, 14, 00)
   }];
 
   var Activity = Parse.Object.extend("Activity");
