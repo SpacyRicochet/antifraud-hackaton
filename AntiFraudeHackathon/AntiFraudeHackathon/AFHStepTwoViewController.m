@@ -7,7 +7,7 @@
 //
 
 #import "AFHStepTwoViewController.h"
-#import "AFHAditionalDataHelper.h"
+#import "AFHAdditionalDataHelper.h"
 
 @interface AFHStepTwoViewController ()
 
@@ -31,7 +31,7 @@
 {
     [super viewWillAppear:animated];
     self.title = _isStepThree ? @"3. Extra" : @"2. Rapporteer";
-    _dict = [AFHAditionalDataHelper dictForKey:self.dataObject.event];
+    _dict = [AFHAdditionalDataHelper dictForKey:self.dataObject.event];
     _textField.text = [_dict textForStep:(_isStepThree ? @3 : @2)];
 
 }

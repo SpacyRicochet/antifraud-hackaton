@@ -7,7 +7,7 @@
 //
 
 #import "AFHStepOneViewController.h"
-#import "AFHAditionalDataHelper.h"
+#import "AFHAdditionalDataHelper.h"
 
 @interface AFHStepOneViewController ()
 
@@ -31,7 +31,7 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
-    _dict = [AFHAditionalDataHelper dictForKey:self.dataObject.event];
+    _dict = [AFHAdditionalDataHelper dictForKey:self.dataObject.event];
     _textField.text = [_dict textForStep:@1];
     if(self.dataObject.flaggedValue)
     {

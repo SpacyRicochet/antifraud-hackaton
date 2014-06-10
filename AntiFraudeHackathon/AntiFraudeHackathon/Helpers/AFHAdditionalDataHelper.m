@@ -6,7 +6,7 @@
 //  Copyright (c) 2014 V.o.f. Noodlewerk Apps. All rights reserved.
 //
 
-#import "AFHAditionalDataHelper.h"
+#import "AFHAdditionalDataHelper.h"
 
 @implementation NSDictionary (AFH)
 
@@ -51,7 +51,7 @@
 
 @end
 
-@implementation AFHAditionalDataHelper
+@implementation AFHAdditionalDataHelper
 
 static NSDictionary *mainDict;
 
@@ -61,7 +61,9 @@ static NSDictionary *mainDict;
     {
         NSString *filePath = [[NSBundle mainBundle] pathForResource:@"mockedData" ofType:@"json"];
         NSData *data = [NSData dataWithContentsOfFile:filePath];
-        NSDictionary *json = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:nil];
+        NSError *error = nil;
+        NSDictionary *json = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&error];
+        NWLogWarnIfError(error);
         mainDict = json;
     }
     return mainDict;

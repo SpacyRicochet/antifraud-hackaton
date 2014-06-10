@@ -13,7 +13,7 @@
 #import "AFHActivity.h"
 #import "AFHCoreDataChief.h"
 #import "AFHActivityTableViewCell.h"
-#import "AFHAditionalDataHelper.h"
+#import "AFHAdditionalDataHelper.h"
 #import "UIImage+Tint.h"
 
 @interface AFHTableViewController () <NWComposedTableViewDataSourceDelegate>
@@ -92,7 +92,7 @@
     
     NSString *dateString = [self.dateFormatter stringFromDate:activity.date];
     cell.detailTextLabel.text = [NSString stringWithFormat:@"%@, %@", activity.accessor, dateString];
-    NSDictionary *dict = [AFHAditionalDataHelper dictForKey:activity.event];
+    NSDictionary *dict = [AFHAdditionalDataHelper dictForKey:activity.event];
     UIImage *image = [dict image];
     if(activity.flaggedValue)
     {

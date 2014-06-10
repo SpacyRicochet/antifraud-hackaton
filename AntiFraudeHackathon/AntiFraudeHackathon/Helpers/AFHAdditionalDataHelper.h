@@ -19,7 +19,7 @@
 
 @end
 
-@interface AFHAditionalDataHelper : NSObject
+@interface AFHAdditionalDataHelper : NSObject
 
 + (NSDictionary *)dictForKey:(NSString *)key;
 

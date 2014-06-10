@@ -10,7 +10,7 @@
 #import "AFHDetailViewController.h"
 #import "AFHDataObject.h"
 #import "AFHReportViewController.h"
-#import "AFHAditionalDataHelper.h"
+#import "AFHAdditionalDataHelper.h"
 
 @interface AFHDetailViewController ()
 
@@ -36,7 +36,7 @@
     _descriptionLabel.text = _dataObject.event;
     _accessorLabel.text = _dataObject.accessor;
     _databaseLabel.text = _dataObject.database;
-    NSDictionary *dict = [AFHAditionalDataHelper dictForKey:_dataObject.event];
+    NSDictionary *dict = [AFHAdditionalDataHelper dictForKey:_dataObject.event];
     _mainTextLabel.text = [dict information];
     NSDateFormatter *dateFormatter = [NSDateFormatter new];
     [dateFormatter setTimeStyle:NSDateFormatterMediumStyle];
